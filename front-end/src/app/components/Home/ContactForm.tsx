@@ -17,7 +17,7 @@ function ContactForm() {
   }
   return (
     <Box sx={{ borderRadius: 2, backgroundColor: '#D4EBF8', padding: 3 }}>
-      <Typography variant='h5' sx={{ color: '#0A5EB0', fontWeight: 'bold', textAlign: 'center', mb: 3 }}>Schedule consulttation</Typography>
+      <Typography variant='h5' sx={{ color: '#0A5EB0', fontWeight: 'bold', textAlign: 'center', mb: 3 }}>Schedule consultation</Typography>
 
       <TextField
         fullWidth
@@ -110,8 +110,8 @@ function ContactForm() {
         fullWidth
         placeholder='Quick description of your issue'
         variant='outlined'
-        name='name'
-        value={formData.name}
+        name='issue'
+        value={formData.issue}
         onChange={handleChange}
         InputProps={{
           startAdornment: (

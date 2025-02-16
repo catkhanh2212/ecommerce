@@ -1,12 +1,15 @@
 
 import { Box } from "@mui/material";
-import Header from "./components/Header";
 import Intro from "./components/Home/Intro";
+import Deals from "./components/Home/Deals";
+import OurChoice from "./components/Home/OurChoice";
+import BestSelling from "./components/Home/BestSelling";
+import Blogs from "./components/Home/Blogs";
+
 
 export default function Home() {
   return (
     <div>
-      <Header />
       <Box
         sx={{
           backgroundImage: 'url(/background.png)',
@@ -19,6 +22,10 @@ export default function Home() {
       >
         <Intro />
       </Box>
+      <Deals />
+      <OurChoice />
+      <BestSelling />
+      <Blogs />
     </div>
   );
 
