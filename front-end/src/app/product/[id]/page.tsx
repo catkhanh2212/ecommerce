@@ -11,6 +11,7 @@ interface Product {
   image: string;
   name: string;
   price: string;
+  unit: string;
   category: string;
   sub_category: string;
   brand: string;
@@ -138,7 +139,7 @@ function Product() {
 
               <Typography sx={{ color: '#4C585B', mt: 0.5, mb: 0.5 }}>{product.id}</Typography>
 
-              <Typography sx={{ color: '#344CB7', mt: 1, mb: 1.5, fontSize: '36px', fontWeight: '600' }}>{product.price}</Typography>
+              <Typography sx={{ color: '#344CB7', mt: 1, mb: 1.5, fontSize: '36px', fontWeight: '600' }}>{product.price} ₫ / {product.unit} </Typography>
 
               <Box sx={{ display: 'flex', gap: 2, mb: 1.5 }}>
                 <Typography sx={{ color: '#686D76', fontSize: '18px' }} >Danh mục: </Typography>

@@ -125,21 +125,21 @@ function Header() {
               <Typography sx={{ fontWeight: 'bold', mb: 1 }}>THUỐC:</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Kháng sinh</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Hạ sốt - giảm đau - chống viêm</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Chống dị ứng - Kháng histamin</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Kháng virus</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Thuốc ho</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Tiêu hóa</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Dị ứng</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Trị ho</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Dạ dày</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Huyết áp tim mạch</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Gan</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Tránh thai, rối loạn kinh nguyệt</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Xương khớp</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Thuốc nhỏ mắt</Typography>
             </Box>
 
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <Typography sx={{ fontWeight: 'bold', mb: 1 }}>THỰC PHẨM CHỨC NĂNG:</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Dành cho trẻ em</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Chăm sóc sắc đẹp</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Nhóm dạ dày</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Nhóm hô hấp</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Hỗ trợ tim mạch</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Hỗ trợ tiêu hóa</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Nhóm mắt - tai - mũi</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Vitamin và khoáng chất</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Hỗ trợ sinh lý</Typography>
@@ -151,14 +151,14 @@ function Header() {
               <Typography sx={{ fontWeight: 'bold', mb: 1 }}>DỤNG CỤ Y TẾ:</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Máy đo đường huyết</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Nhiệt kế</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Máy xông khí dung</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Máy đo đường huyết</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Máy đo huyết áp</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Khẩu trang</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Dụng cụ vệ sinh mũi</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Khác</Typography>
 
               <Typography sx={{ fontWeight: 'bold', mt: 1, mb: 1 }}>CHĂM SÓC CÁ NHÂN:</Typography>
               <Typography sx={{ cursor: 'pointer' }}>Chăm sóc răng miệng</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Vệ sinh phụ nữ</Typography>
+              <Typography sx={{ cursor: 'pointer' }}>Vệ sinh cá nhân</Typography>
             </Box>
 
           </Box>
