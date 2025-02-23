@@ -3,7 +3,8 @@
 import { ExpandMore, FilterList } from '@mui/icons-material';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardContent, CardMedia, Checkbox, CircularProgress, FormControlLabel, FormGroup, Pagination, Typography } from '@mui/material';
 import axios from 'axios';
-import { useParams } from 'next/navigation';
+import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 // Interface sản phẩm
@@ -23,6 +24,13 @@ interface Product {
   ingredient: string;
   specifications: string;
   uses: string;
+}
+
+interface Cart {
+  id: number,
+  user_id: string,
+  product: Product,
+  quantity: number
 }
 
 const categoryMapping: Record<string, string> = {
@@ -59,12 +67,12 @@ const subcategoryMapping: Record<string, string[]> = {
   "thuoc": [
     "Kháng sinh",
     "Hạ sốt - giảm đau - chống viêm",
-    "Chống dị ứng - Kháng histamin",
-    "Kháng virus",
-    "Thuốc ho",
+    "Dị ứng",
+    "Trị ho",
     "Tiêu hóa",
     "Huyết áp tim mạch",
     "Gan",
+    "Xương khớp",
     "Tránh thai, rối loạn kinh nguyệt",
   ],
 };
@@ -81,6 +89,51 @@ function Category() {
   const [selectedSubCategory, setSelectedSubCategory] = useState<string[]>([])
   const [selectedOrigin, setSelectedOrigin] = useState<string[]>([])
   const [sortOrder, setSortOrder] = useState<"asc" | "des" | null>(null)
+  const searchParams = useSearchParams()
+  const subCategoryParam = searchParams.get("sub_category")
+  const [user, setUser] = useState<User | null>(null)
+
+  const auth = getAuth()
+
+  useEffect(() => {
+    const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser)
+    })
+
+    return () => unsubcribe()
+  }, [auth])
+
+  const router = useRouter()
+
+  const addToCart = (product: Product) => {
+    axios.get(`http://localhost:3001/cart?user_id=${user?.uid}`)
+      .then((response) => {
+        const cartItems: Cart[] = response.data
+
+        const existingCartItem = cartItems.find((item) => item.product.id === product.id)
+
+        if (!existingCartItem) {
+          axios.post(`http://localhost:3001/cart/`, {
+            user_id: user?.uid,
+            product: product,
+            quantity: 1
+          })
+        }
+        else {
+          axios.put(`http://localhost:3001/cart/${existingCartItem.id}`, {
+            ...existingCartItem,
+            quantity: existingCartItem.quantity + 1
+          })
+        }
+      })
+      .catch((error) => error.log('Error: ', error))
+    
+  }
+
+
+  const handleProductClick = (product: Product) => {
+    router.push(`/product/${product.id}`)
+  }
 
   const handleOriginFilter = (origin: string) => {
     setSelectedOrigin((prev) =>
@@ -188,6 +241,12 @@ function Category() {
       console.log('Sản phẩm hiện tại:', products.map(p => p.id));
     }
   }, [products]);
+
+  useEffect(() => {
+    if (subCategoryParam) {
+      setSelectedSubCategory([subCategoryParam]); // Tự động tick checkbox
+    }
+  }, [subCategoryParam]);
 
 
   if (loading) {
@@ -347,7 +406,7 @@ function Category() {
                   fontWeight: '600',
                   color: sortOrder === 'asc' ? '#0A5EB0' : '#3D3D3D',
                   backgroundColor: 'white',
-                  border: sortOrder === 'asc' ?  '2px solid #0A5EB0' : '1px solid #3D3D3D',
+                  border: sortOrder === 'asc' ? '2px solid #0A5EB0' : '1px solid #3D3D3D',
                 }}
               >
                 Giá thấp
@@ -378,9 +437,9 @@ function Category() {
           <Box display='grid' gridTemplateColumns='repeat(4, 1fr)' gap='16px'>
             {displayedProducts?.map((product) => ((
               <Card key={product.id} sx={{ cursor: 'pointer', position: 'relative', borderRadius: 4, height: '100%' }}>
-                <CardMedia sx={{ p: 2 }} component='img' height='250' image={product.image} />
+                <CardMedia onClick={() => handleProductClick(product)} sx={{ p: 2 }} component='img' height='250' image={product.image} />
                 <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '160px' }}>
-                  <Box>
+                  <Box onClick={() => handleProductClick(product)}>
                     <Typography
                       sx={{
                         fontWeight: '600',
@@ -400,6 +459,7 @@ function Category() {
 
                   {/* Nút luôn cố định ở dưới */}
                   <Button
+                    onClick={() => addToCart(product)}
                     fullWidth
                     variant="contained"
                     sx={{

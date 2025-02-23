@@ -3,23 +3,73 @@
 import { AccountCircle, ArrowDropDown, Discount, LocalHospital, ShoppingCart } from '@mui/icons-material'
 import { Avatar, Box, Button, Modal, Popover, TextField, Typography } from '@mui/material'
 import { initializeApp } from 'firebase/app';
-import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, User } from 'firebase/auth';
-import React, { useState } from 'react'
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, User } from 'firebase/auth';
+import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCM7yFUAt0ca-hJy9zBbYUeMCWuS4g0PCc",
-  authDomain: "fir-ad477.firebaseapp.com",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+const categoryMapping: Record<string, string> = {
+  'thuc-pham-chuc-nang': 'Thực phẩm chức năng',
+  'thuoc': 'Thuốc',
+  'dung-cu-y-te': 'Dụng cụ y tế',
+  'cham-soc-ca-nhan': 'Chăm sóc cá nhân'
+};
+
 function Header() {
   const [anchorE1, setAnchorE1] = useState<HTMLElement | null>(null);
   const [anchorLogout, setAnchorLogout] = useState<HTMLElement | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+
+  const router = useRouter()
+
+  const handleHomeClick = () => {
+    router.push('/')
+  }
+
+  const handleCartClick = () => {
+    router.push('/cart')
+  }
+
+  const handleCategoryClick = (categoryLabel: string) => {
+    const categoryKey = Object.keys(categoryMapping).find(
+      (key) => categoryMapping[key] === categoryLabel
+    )
+
+    if (categoryKey) {
+      router.push(`/product/category/${categoryKey}`)
+    }
+  }
+
+  const handleSubCategoryClick = (category: string, subCategory: string) => {
+    const categoryKey = Object.keys(categoryMapping).find(
+      (key) => categoryMapping[key] === category
+    )
+
+    if (categoryKey) {
+      const queryParams = new URLSearchParams()
+      if (subCategory) queryParams.append("sub_category", subCategory)
+
+      
+
+      const queryString = queryParams.toString()
+
+      console.log("query string: ", queryString)
+      const path = queryString
+        ? `/product/category/${categoryKey}?${queryString}`
+        : `/product/category/${categoryKey}`
+
+      router.push(path)
+    }
+  }
 
   const handleOpen = (event: React.MouseEvent<HTMLDivElement>) => {
     setAnchorE1(event.currentTarget);
@@ -28,6 +78,16 @@ function Header() {
   const handleClose = () => {
     setAnchorE1(null);
   };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      console.log("User từ Firebase:", currentUser);
+    });
+
+    return () => unsubscribe(); // Cleanup listener khi unmount
+  }, []);
+  
 
   const handleLogin = () => {
     signInWithPopup(auth, provider)
@@ -39,6 +99,7 @@ function Header() {
         console.error("Lỗi đăng nhập: ", error);
       });
   };
+  
 
   const handleLogout = () => {
     signOut(auth).then(() => {
@@ -47,6 +108,7 @@ function Header() {
       alert("Đã đăng xuất!");
     });
   };
+
 
   const handleAccountClick = (event: React.MouseEvent<HTMLDivElement>) => {
     if (user) {
@@ -68,7 +130,7 @@ function Header() {
       }}>
 
       {/* Logo */}
-      <Typography sx={{ fontFamily: "'Philosopher', Arial, Helvetica, sans-serif", fontSize: '28px', fontWeight: 'bold', color: 'white' }}>
+      <Typography onClick={() => handleHomeClick()} sx={{ fontFamily: "'Philosopher', Arial, Helvetica, sans-serif", fontSize: '28px', fontWeight: 'bold', color: 'white', cursor: 'pointer' }}>
         GiaKhanh
       </Typography>
 
@@ -122,43 +184,43 @@ function Header() {
         >
           <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2, color: '#2D336B', p: 3 }}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-              <Typography sx={{ fontWeight: 'bold', mb: 1 }}>THUỐC:</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Kháng sinh</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Hạ sốt - giảm đau - chống viêm</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Dị ứng</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Trị ho</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Dạ dày</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Huyết áp tim mạch</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Gan</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Xương khớp</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Thuốc nhỏ mắt</Typography>
+              <Typography onClick={() => handleCategoryClick("Thuốc")} sx={{ fontWeight: 'bold', mb: 1, cursor: 'pointer' }}>THUỐC:</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Kháng sinh")} sx={{ cursor: 'pointer' }}>Kháng sinh</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Hạ sốt - giảm đau - chống viêm")} sx={{ cursor: 'pointer' }}>Hạ sốt - giảm đau - chống viêm</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Dị ứng")} sx={{ cursor: 'pointer' }}>Dị ứng</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Trị ho")} sx={{ cursor: 'pointer' }}>Trị ho</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Tiêu hóa")} sx={{ cursor: 'pointer' }}>Tiêu hóa</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Huyết áp tim mạch")} sx={{ cursor: 'pointer' }}>Huyết áp tim mạch</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Gan")} sx={{ cursor: 'pointer' }}>Gan</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Xương khớp")} sx={{ cursor: 'pointer' }}>Xương khớp</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thuốc", "Thuốc nhỏ mắt")} sx={{ cursor: 'pointer' }}>Thuốc nhỏ mắt</Typography>
             </Box>
 
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-              <Typography sx={{ fontWeight: 'bold', mb: 1 }}>THỰC PHẨM CHỨC NĂNG:</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Dành cho trẻ em</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Chăm sóc sắc đẹp</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Hỗ trợ tim mạch</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Hỗ trợ tiêu hóa</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Nhóm mắt - tai - mũi</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Vitamin và khoáng chất</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Hỗ trợ sinh lý</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Nhóm thần kinh</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Giảm cân</Typography>
-            </Box>
+              <Typography onClick={() => handleCategoryClick("Thực phẩm chức năng")} sx={{ fontWeight: 'bold', mb: 1, cursor: 'pointer' }}>THỰC PHẨM CHỨC NĂNG:</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Dành cho trẻ em")} sx={{ cursor: 'pointer' }}>Dành cho trẻ em</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Chăm sóc sắc đẹp")} sx={{ cursor: 'pointer' }}>Chăm sóc sắc đẹp</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Hỗ trợ tim mạch")} sx={{ cursor: 'pointer' }}>Hỗ trợ tim mạch</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Hỗ trợ tiêu hóa")} sx={{ cursor: 'pointer' }}>Hỗ trợ tiêu hóa</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Nhóm mắt - tai - mũi")} sx={{ cursor: 'pointer' }}>Nhóm mắt - tai - mũi</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Vitamin và khoáng chất")} sx={{ cursor: 'pointer' }}>Vitamin và khoáng chất</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Hỗ trợ sinh lý")} sx={{ cursor: 'pointer' }}>Hỗ trợ sinh lý</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Nhóm thần kinh")} sx={{ cursor: 'pointer' }}>Nhóm thần kinh</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Giảm cân")} sx={{ cursor: 'pointer' }}>Giảm cân</Typography>
+            </Box> 
 
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-              <Typography sx={{ fontWeight: 'bold', mb: 1 }}>DỤNG CỤ Y TẾ:</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Máy đo đường huyết</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Nhiệt kế</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Máy đo huyết áp</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Khẩu trang</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Dụng cụ vệ sinh mũi</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Khác</Typography>
+              <Typography onClick={() => handleCategoryClick("Dụng cụ y tế")} sx={{ fontWeight: 'bold', mb: 1, cursor: 'pointer' }}>DỤNG CỤ Y TẾ:</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Dụng cụ y tế", "Máy đo đường huyết")} sx={{ cursor: 'pointer' }}>Máy đo đường huyết</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Dụng cụ y tế", "Nhiệt kế")} sx={{ cursor: 'pointer' }}>Nhiệt kế</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Dụng cụ y tế", "Máy đo huyết áp")} sx={{ cursor: 'pointer' }}>Máy đo huyết áp</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Dụng cụ y tế", "Khẩu trang")} sx={{ cursor: 'pointer' }}>Khẩu trang</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Dụng cụ y tế", "Dụng cụ vệ sinh mũi")} sx={{ cursor: 'pointer' }}>Dụng cụ vệ sinh mũi</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Dụng cụ y tế", "Khác")} sx={{ cursor: 'pointer' }}>Khác</Typography>
 
-              <Typography sx={{ fontWeight: 'bold', mt: 1, mb: 1 }}>CHĂM SÓC CÁ NHÂN:</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Chăm sóc răng miệng</Typography>
-              <Typography sx={{ cursor: 'pointer' }}>Vệ sinh cá nhân</Typography>
+              <Typography onClick={() => handleCategoryClick("Chăm sóc cá nhân")} sx={{ fontWeight: 'bold', mt: 1, mb: 1, cursor: 'pointer' }}>CHĂM SÓC CÁ NHÂN:</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Chăm sóc cá nhân", "Chăm sóc răng miệng")} sx={{ cursor: 'pointer' }}>Chăm sóc răng miệng</Typography>
+              <Typography onClick={() => handleSubCategoryClick("Chăm sóc cá nhân", "Vệ sinh cá nân")} sx={{ cursor: 'pointer' }}>Vệ sinh cá nhân</Typography>
             </Box>
 
           </Box>
@@ -180,6 +242,7 @@ function Header() {
 
       {/* Cart */}
       <Box
+        onClick = {() => handleCartClick()}
         sx={{
           display: 'flex',
           alignItems: 'center',

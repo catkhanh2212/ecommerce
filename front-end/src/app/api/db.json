@@ -1,7 +1,53 @@
 {
+  "cart": [
+    {
+      "user_id": "NwZKE1ye1cYHBip6CnoHP2X249r2",
+      "product": {
+        "id": "100002",
+        "image": "https://images-na.ssl-images-amazon.com/images/I/613p7otgd3L.jpg",
+        "name": "Ritual Synbiotic+ Prebiotic",
+        "price": "1,879,000",
+        "unit": "Hộp",
+        "category": "Thực phẩm chức năng",
+        "sub_category": "Hỗ trợ tiêu hóa",
+        "brand": "RITUAL",
+        "origin": "Mĩ",
+        "dosage": "Uống 3 viên x 2 lần mỗi ngày kèm hoặc không kèm bữa ăn.",
+        "alert": "Có thể chứa dư lượng sulfite. Tránh xa tầm tay trẻ em. Nếu bạn đang mang thai, cho con bú hoặc có vấn đề sức khỏe, hãy tham khảo ý kiến bác sĩ trước khi sử dụng.",
+        "preserve": "Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. \n Đậy chặt nắp sản phẩm sau khi mở nắp, không dùng tay ướt để lấy sản phẩm.",
+        "ingredient": "https://youtheory.vn/wp-content/uploads/2021/11/Youtheory-Collagen-bang-thanh-phan.jpg",
+        "specifications": "Hộp 30 viên",
+        "uses": "Hỗ trợ miễn dịch, Hỗ trợ sức khỏe đường ruột"
+      },
+      "quantity": 4,
+      "id": "4448"
+    },
+    {
+      "id": "e6c7",
+      "user_id": "NwZKE1ye1cYHBip6CnoHP2X249r2",
+      "product": {
+        "id": "400001",
+        "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P00559_1.png",
+        "name": "Thuốc xịt ngoài da Salonpas giảm đau, kháng viêm do căng cơ, bong gân ",
+        "price": "210,000",
+        "unit": "Chai",
+        "category": "Thuốc",
+        "sub_category": "Hạ sốt - giảm đau - chống viêm",
+        "brand": "Salonpas",
+        "origin": "Nhật Bản",
+        "dosage": "Chai xịt giảm đau Salonpas Jet Spray Hisamitsu 118Ml dùng xịt ngoài da tại vùng bị đau. Để tránh bị tê cóng, giữ chai cách da xa 10cm, và xịt không quá 1 giây. \n Người lớn và trẻ em từ 12 tuổi trở lên: Không sử dụng quá 4 lần trong ngày cho mỗi vùng bị đau. \n Trẻ em dưới 12 tuổi: Hỏi ý kiến Bác sĩ hoặc Dược sĩ trước khi sử dụng.",
+        "alert": "Chỉ dùng ngoài da. \n Không xịt tại vùng da bị tổn thương hoặc vết thương hở. \n Không sử dụng ở nơi có tia lửa bán ra.",
+        "preserve": "Nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp. \n Không để thuốc ở nơi nhiệt độ quá 48oC.",
+        "ingredient": "L-menthol 0.438g, Methyl salicylate 1.46g.",
+        "specifications": "Chai 118ml.",
+        "uses": "Chai xịt Salonpas Jet Spray Hisamitsu 118Ml dùng giảm đau, kháng viêm trong các cơn đau liên quan đến: Căng cơ, bong gân, bầm tím, mỏi cơ, đau cơ, đau lưng, đau vai, viêm khớp, đau khớp. \n Methyl salicylate là thuốc kháng viêm dạng non-steroidal (NSAIDs) với đặc tính giảm đau và kháng viêm,l-Menthol tạo phản ứng làm mát từ đó có tác dụng giảm đau. Mã ATC: M02A. \n Methyl Salicylate được hấp thu qua da và được chuyển hóa rộng rãi thành Axit Salicylic, cho tác dụng trị liệu lên vùng da bị đau, một phần nhỏ được hấp thu vào cơ thể và được đào thải qua nước tiểu, chủ yếu là Axit Salicylic cũng như các chất chuyển hóa liên quan khác. \n l-Menthol được hấp thu nhanh vào da, cho tác dụng trị liệu ở nơi sử dụng, và được hấp thu vào cơ thể, chuyển hóa, đào thải nhanh qua nước tiểu và mật dưới dạng Glucuronide."
+      },
+      "quantity": 2
+    }
+  ],
   "products": [
     {
-      "id": 100001,
+      "id": "100001",
       "image": "https://images-na.ssl-images-amazon.com/images/I/61h9j8OAPqL.jpg",
       "name": "Youtheory Collagen Advanced Formula",
       "price": "979,000",
@@ -18,7 +64,7 @@
       "uses": "Giúp làm giảm và làm mờ nếp nhăn trên mặt, hạn chế hiện tượng chảy xệ da do tuổi tác."
     },
     {
-      "id": 100002,
+      "id": "100002",
       "image": "https://images-na.ssl-images-amazon.com/images/I/613p7otgd3L.jpg",
       "name": "Ritual Synbiotic+ Prebiotic",
       "price": "1,879,000",
@@ -35,7 +81,7 @@
       "uses": "Hỗ trợ miễn dịch, Hỗ trợ sức khỏe đường ruột"
     },
     {
-      "id": 100003,
+      "id": "100003",
       "image": "https://product.hstatic.net/200000296488/product/omage-369-01_8e17d455eaec46379c3b118db238c973_master.jpg",
       "name": "Myvitamins Omega 3-6-9",
       "price": "269,000",
@@ -52,7 +98,7 @@
       "uses": "Viên uống bổ sung Omega 3-6-9 của Myvitamins có nguồn gốc tự nhiên từ cá và thực vật, cân bằng độc đáo của axit Linoleic, axit Gamma Linoleic, axit Oleic, DHA (axit Docosahexaenoic) và EPA (axit Eicosapentaenoic), giúp duy trì mức cholesterol và giữ cho huyết áp của chúng ta khỏe mạnh."
     },
     {
-      "id": 100004,
+      "id": "100004",
       "image": "https://product.hstatic.net/200000296488/product/mat-ong-manuka-honey-70-mgo-250g-1_b7c88926f3544513bc5c6c16ae8f75c8_master.jpg",
       "name": "Manuka Doctor Honey 70 MGO 250g",
       "price": "600,000",
@@ -69,7 +115,7 @@
       "uses": "Mật ong Manuka đa hoa chất lượng cao. Đơn giản chỉ cần thưởng thức một thìa mỗi ngày, trộn vào đồ uống nóng hoặc thưởng thức nó như một thành phần trong sinh tố lành mạnh, bữa sáng, món nướng, thuốc bổ hoặc đồ uống nóng. Mật ong Manuka đặc hơn và mịn hơn mật ong thông thường. Nó có màu sẫm hơn, có độ ngọt tinh tế hơn và vị gỗ tự nhiên."
     },
     {
-      "id": 100005,
+      "id": "100005",
       "image": "https://product.hstatic.net/200000296488/product/biotin-01_591cabb645dc4916aa84c8b4013d2bf0_master.jpg",
       "name": "Myvitamins Biotin",
       "price": "140,000",
@@ -86,7 +132,7 @@
       "uses": "Viên uống bổ sung Biotin của Myvitamins là một nguồn tự nhiên của vitamin B7, giúp bạn có đủ chất dinh dưỡng thiết yếu này để giữ cho năng lượng tràn đầy. Đồng thời giúp cho tóc, da và móng tay của bạn trông khỏe mạnh."
     },
     {
-      "id": 100006,
+      "id": "100006",
       "image": "https://product.hstatic.net/200000296488/product/keo-deo-hairburst-chewable-hair-vitamins-01_a1b6ef58a32d4fecad3cbd614191c8a9_master.jpg",
       "name": "HairBurst Chewable Hair Vitamins",
       "price": "579,000",
@@ -103,7 +149,7 @@
       "uses": "Kẹo dẻo HAIRBURST CHEWABLE HAIR VITAMINS là sản phẩm hỗ trợ tăng cường sức khoẻ cho tóc cũng như cung cấp các dinh dưỡng thiết yếu cho mái tóc của bạn."
     },
     {
-      "id": 100007,
+      "id": "100007",
       "image": "https://product.hstatic.net/200000296488/product/vien-uong-tinh-bot-nghe-nat_form-curcuma-bio-ecoresponsable-01_87b6e4b98bb5427ba1e68e5d66beab94_master.jpg",
       "name": "Nat&Form Curcuma Bio",
       "price": "270,000",
@@ -120,7 +166,7 @@
       "uses": "Viên tinh bột nghệ hữu cơ Nat & Form Curcuma Bio của Pháp với nguồn nguyên liệu sạch hữu cơ cùng với quy trình điều chế khắt khe, hàm lượng Curcumin tinh khiết giúp chống viêm, hỗ trợ dạ dày, khớp, chức năng gan, chống oxy hóa,..."
     },
     {
-      "id": 100008,
+      "id": "100008",
       "image": "https://product.hstatic.net/200000296488/product/coconut-collagen-01_e25669cbd4dc49e39b790f3db7611322_master.jpg",
       "name": "Myvitamins Coconut & Collagen",
       "price": "359,000",
@@ -137,7 +183,7 @@
       "uses": "Kẹo dẻo HAIRBURST CHEWABLE HAIR VITAMINS là sản phẩm hỗ trợ tăng cường sức khoẻ cho tóc cũng như cung cấp các dinh dưỡng thiết yếu cho mái tóc của bạn."
     },
     {
-      "id": 100009,
+      "id": "100009",
       "image": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12543332-9654933719612264.jpg",
       "name": "Apple Cider Vinegar Gummies",
       "price": "208,000",
@@ -154,7 +200,7 @@
       "uses": "Kẹo dẻo HAIRBURST CHEWABLE HAIR VITAMINS là sản phẩm hỗ trợ tăng cường sức khoẻ cho tóc cũng như cung cấp các dinh dưỡng thiết yếu cho mái tóc của bạn."
     },
     {
-      "id": 100010,
+      "id": "100010",
       "image": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12376931-1895123966341113.jpg",
       "name": "Hair, Skin and Nails Gummies",
       "price": "418,000",
@@ -171,7 +217,7 @@
       "uses": "Kẹo dẻo HAIRBURST CHEWABLE HAIR VITAMINS là sản phẩm hỗ trợ tăng cường sức khoẻ cho tóc cũng như cung cấp các dinh dưỡng thiết yếu cho mái tóc của bạn."
     },
     {
-      "id": 100011,
+      "id": "100011",
       "image": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/12088106-1084933719691716.jpg",
       "name": "Multivitamin Gummies",
       "price": "418,000",
@@ -188,7 +234,7 @@
       "uses": "Kẹo dẻo HAIRBURST CHEWABLE HAIR VITAMINS là sản phẩm hỗ trợ tăng cường sức khoẻ cho tóc cũng như cung cấp các dinh dưỡng thiết yếu cho mái tóc của bạn."
     },
     {
-      "id": 100012,
+      "id": "100012",
       "image": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/15354069-1835183866571640.jpg",
       "name": "Mushroom Gummies (Lion's Mane, Reishi, Cordyceps)",
       "price": "257,000",
@@ -205,7 +251,7 @@
       "uses": "Kẹo dẻo HAIRBURST CHEWABLE HAIR VITAMINS là sản phẩm hỗ trợ tăng cường sức khoẻ cho tóc cũng như cung cấp các dinh dưỡng thiết yếu cho mái tóc của bạn."
     },
     {
-      "id": 100013,
+      "id": "100013",
       "image": "https://static.thcdn.com/images/large/webp//productimg/1600/1600/15354069-1835183866571640.jpg",
       "name": "Mushroom Gummies (Lion's Mane, Reishi, Cordyceps)",
       "price": "257,000",
@@ -222,7 +268,7 @@
       "uses": "Kẹo dẻo HAIRBURST CHEWABLE HAIR VITAMINS là sản phẩm hỗ trợ tăng cường sức khoẻ cho tóc cũng như cung cấp các dinh dưỡng thiết yếu cho mái tóc của bạn."
     },
     {
-      "id": 200001,
+      "id": "200001",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn01092/v/226.jpg",
       "name": "California Gold Nutrition, Vitamin C Gummies",
       "price": "350,000",
@@ -239,7 +285,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 200002,
+      "id": "200002",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/sre/sre09153/v/40.jpg",
       "name": "Sports Research, Omega-3 Fish Oil, Triple Strength",
       "price": "1,679,000",
@@ -254,10 +300,9 @@
       "ingredient": "1250 mg Fish Oil, 690mg EPA, 260mg DHA (chỉ riêng phiên bản 120 viên có hàm lượng DHA 310mg).",
       "specifications": "Hộp 90 viên.",
       "uses": "Sports Research Omega 3 là sản phẩm cung cấp hàm lượng cao EPA và DHA tinh khiết, chất lượng giúp tăng cường sức khỏe tổng thể và thúc đẩy hiệu quả tập luyện. "
-
     },
     {
-      "id": 200003,
+      "id": "200003",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/znt/znt02602/v/25.jpg",
       "name": "Zint, Pure Grass-Fed Collagen Peptides, Unflavored",
       "price": "1,491,000",
@@ -274,7 +319,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 200004,
+      "id": "200004",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/teo/teo00748/v/58.jpg",
       "name": "Terra Origin, Healthy Gut™, Berry",
       "price": "896,000",
@@ -291,7 +336,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 200005,
+      "id": "200005",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cgn/cgn01201/v/143.jpg",
       "name": "California Gold Nutrition, B Complex Gummies, Strawberry",
       "price": "200,000",
@@ -308,7 +353,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 200006,
+      "id": "200006",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/mrm/mrm71301/l/35.jpg",
       "name": "MRM Nutrition, Chromium Picolinate, 200 mcg",
       "price": "148,000",
@@ -325,7 +370,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 200007,
+      "id": "200007",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/fbs/fbs50133/v/40.jpg",
       "name": "Futurebiotics, Vitamin K2 + D3, Extra Strength",
       "price": "411,000",
@@ -342,7 +387,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 200009,
+      "id": "200009",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/koo/koo50318/v/24.jpg",
       "name": "KOS, Organic Lion's Mane Powder, 12.84 oz",
       "price": "804,000",
@@ -359,7 +404,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 200010,
+      "id": "200010",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/lre/lre78700/v/8.jpg",
       "name": "Tribe Organics, Lion's Mane Mushroom",
       "price": "749,000",
@@ -376,7 +421,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 300002,
+      "id": "300002",
       "image": "https://alphafoods.co.uk/cdn/shop/files/Products_CollagenRaspberry_600x@2x.png?v=1694423891",
       "name": "Alpha Collagen, Raspberry Collagen Peptides",
       "price": "891,000",
@@ -393,7 +438,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 300004,
+      "id": "300004",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/nel/nel13262/v/56.jpg",
       "name": "NeoCell, Super Collagen + Vitamin C & Biotin",
       "price": "538,000",
@@ -410,7 +455,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 300007,
+      "id": "300007",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/sre/sre01018/v/64.jpg",
       "name": "Sports Research, Collagen Peptides, Unflavored",
       "price": "884,000",
@@ -427,7 +472,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 300008,
+      "id": "300008",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/ole/ole00507/v/8.jpg",
       "name": "OLLY, Undeniable Beauty, Grapefruit Glam",
       "price": "419,000",
@@ -444,7 +489,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 300009,
+      "id": "300009",
       "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/cmv/cmv00555/v/30.jpg",
       "name": "Comvita, Manuka Honey, UMF 15+, MGO 514+, 8.8 oz (250 g)",
       "price": "1,075,000",
@@ -461,7 +506,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000010,
+      "id": "3000010",
       "image": "https://i.ebayimg.com/images/g/7VcAAOSwe7VnK7wj/s-l1200.png",
       "name": "Weight Loss Supplements 3 Pack Vital Surge Testo Gummies for Men, Vital Sure Male Gummy",
       "price": "1,004,000",
@@ -478,7 +523,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000011,
+      "id": "3000011",
       "image": "https://m.media-amazon.com/images/I/71rVJ4LQOQL._AC_SX679_.jpg",
       "name": "SlimFast Strawberry Flavour, 16 Servings, 584 g",
       "price": "585,000",
@@ -495,7 +540,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000012,
+      "id": "3000012",
       "image": "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F43271%2FVX%2F43271_1.png&id=2024-03-11T11-00-02-066Z_MediaMigration&version=1664863202&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
       "name": "Meal Replacement for weight control – Vanilla Flavour 43271 Oriflame",
       "price": "850,000",
@@ -512,7 +557,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000013,
+      "id": "3000013",
       "image": "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F40745%2FVX%2F40745_1.png&id=17417363&version=9&w=700&bc=%23f5f5f5&ib=%23f5f5f5&q=90&imageFormat=WebP",
       "name": "Thực phẩm dùng cho chế độ ăn đặc biệt Meal Replacement for Weight Control",
       "price": "1,100,000",
@@ -529,7 +574,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000014,
+      "id": "3000014",
       "image": "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F45307%2FVX%2F45307_1.png&id=16706436&version=9&w=700&bc=%23f5f5f5&ib=%23f5f5f5&q=90&imageFormat=WebP",
       "name": "Thực phẩm dùng cho chế độ ăn đặc biệt Meal Replacement for Weight Control",
       "price": "1,100,000",
@@ -546,7 +591,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000015,
+      "id": "3000015",
       "image": "https://m.media-amazon.com/images/I/51GNVOF2l8L._AC_UF1000,1000_QL80_.jpg",
       "name": "Bloom Nutrition Superfood Greens Powder, Digestive Enzymes with Probiotics and Prebiotics",
       "price": "900,000",
@@ -563,7 +608,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000016,
+      "id": "3000016",
       "image": "https://images-na.ssl-images-amazon.com/images/I/61w20UF46-L.jpg",
       "name": "Bloom Nutrition Superfood Greens Powder Stick Packs, Digestive Enzymes with Probiotics and Prebiotics",
       "price": "850,000",
@@ -580,7 +625,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000017,
+      "id": "3000017",
       "image": "https://target.scene7.com/is/image/Target/GUEST_d7b7179e-c151-47b1-b9b8-73faf9d7120a?wid=800&hei=800&qlt=80&fmt=webp",
       "name": "BLOOM NUTRITION Colostrum & Collagen Peptide Powder - Không có hương vị",
       "price": "850,000",
@@ -597,7 +642,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000018,
+      "id": "3000018",
       "image": "https://m.media-amazon.com/images/I/61q-q4yyNgL._AC_SX679_.jpg",
       "name": "Bloom Nutrition Superfood Greens Powder Stick Packs, Digestive Enzymes with Probiotics and Prebiotics",
       "price": "850,000",
@@ -614,7 +659,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000019,
+      "id": "3000019",
       "image": "https://i5.walmartimages.com/seo/Bloom-Nutrition-High-Energy-Pre-Workout-Drink-Mix-Strawberry-Mango-30-Servings_c53b0c83-6bee-4d01-bfab-8a5d710f52e8.c445ab8bee2937f0585bcf3808182e93.png",
       "name": "Bột trước khi tập luyện năng lượng cao Bloom Nutrition, Dâu Mango",
       "price": "1,300,000",
@@ -631,7 +676,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000020,
+      "id": "3000020",
       "image": "https://target.scene7.com/is/image/Target/GUEST_72da780e-b1a5-434c-a1da-0e89a5695c35?wid=800&hei=800&qlt=80&fmt=webp",
       "name": "BLOOM NUTRITION Colostrum & Collagen Peptide Powder - Kem Cam",
       "price": "1,200,000",
@@ -648,7 +693,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000021,
+      "id": "3000021",
       "image": "https://giantchemistharbourtown.com.au/cdn/shop/files/BerryImmune-125g-Mock.png?v=1729223103",
       "name": "Bột siêu thực phẩm quả mọng tăng cường miễn dịch cho trẻ Nutra Organics Berry Immune",
       "price": "620,000",
@@ -665,7 +710,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000022,
+      "id": "3000022",
       "image": "https://giantchemistharbourtown.com.au/cdn/shop/files/VeggieHero-125g-Mock_512x640.png?v=1729230093",
       "name": "Bột rau củ cho trẻ em Nutra Organics Veggie Hero",
       "price": "620,000",
@@ -682,7 +727,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000023,
+      "id": "3000023",
       "image": "https://www.davidjonespharmacy.com.au/assets/full/125494.jpg?20230711165636",
       "name": "Bột siêu thực phẩm hỗ trợ đường ruột cho trẻ Nutra Organics Super Tummy",
       "price": "620,000",
@@ -699,7 +744,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000024,
+      "id": "3000024",
       "image": "https://australianorganicproducts.com.au/cdn/shop/products/M3_f90d0132-359b-4a92-8ad2-97871bbdc50c_700x700.jpg?v=1667770542",
       "name": "Bột siêu thực phẩm xoa dịu tinh thần cho trẻ Nutra Organics Captain Calm",
       "price": "620,000",
@@ -716,7 +761,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000025,
+      "id": "3000025",
       "image": "https://cdn11.bigcommerce.com/s-v7ajalirzz/images/stencil/original/products/14174/34204/nutra-organics-choc-whiz__76362.1663119068.jpg?c=2",
       "name": "Bột siêu thực phẩm tăng cường trí não cho trẻ Nutra Organics Choc Whiz",
       "price": "620,000",
@@ -733,7 +778,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000026,
+      "id": "3000026",
       "image": "https://theanorganics.com/wp-content/uploads/2023/01/llama-naturals-elderberry-immunity-bites-for-kids-1.png.webp",
       "name": "Viên nhai tăng cường miễn dịch cho bé Llama Naturals elderberry immunity bites for kids",
       "price": "660,000",
@@ -750,7 +795,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000027,
+      "id": "3000027",
       "image": "https://theanorganics.com/wp-content/uploads/2022/02/Untitled-design.jpg",
       "name": "Viên nhai vitamin D3 hữu cơ Llama Naturals Plant-Based Vitamin D3 Whole Fruit Gummies",
       "price": "575,000",
@@ -767,7 +812,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000028,
+      "id": "3000028",
       "image": "https://m.media-amazon.com/images/I/61pMzY6JEYL.jpg",
       "name": "Viên nhai hữu cơ bổ sung lợi khuẩn & prebiotic cho bé Llama Naturals Prebiotic & Probiotic Whole Fruit Gummies",
       "price": "620,000",
@@ -784,7 +829,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000029,
+      "id": "3000029",
       "image": "https://m.media-amazon.com/images/I/61pMzY6JEYL.jpg",
       "name": "Viên nhai cho bé Llama Naturals Prebiotic hỗ trợ sức khỏe đường ruột",
       "price": "620,000",
@@ -801,7 +846,7 @@
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
     {
-      "id": 3000030,
+      "id": "3000030",
       "image": "https://theanorganics.com/wp-content/uploads/2022/02/llama-natural-vitamin-for-kids-1.png.webp",
       "name": "Viên nhai vitamin hữu cơ cho bé Llama Naturals Plant-Based Multivitamin Whole Fruit Gummies",
       "price": "680,000",
@@ -817,10 +862,8 @@
       "specifications": "Hộp 60 viên.",
       "uses": "California Gold Nutrition Vitamin C Gummies là một sản phẩm bổ sung vitamin C dạng kẹo dẻo, được thiết kế đặc biệt cho những ai không thích sử dụng viên nang hay viên nén. Với hương vị cam tự nhiên thơm ngon, sản phẩm này không chỉ mang lại sự tiện lợi mà còn giúp cung cấp lượng vitamin C cần thiết cho cơ thể hàng ngày, hỗ trợ sức khỏe miễn dịch và hoạt động chống oxy hóa."
     },
-
-
     {
-      "id": 400001,
+      "id": "400001",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P00559_1.png",
       "name": "Thuốc xịt ngoài da Salonpas giảm đau, kháng viêm do căng cơ, bong gân ",
       "price": "210,000",
@@ -837,7 +880,7 @@
       "uses": "Chai xịt Salonpas Jet Spray Hisamitsu 118Ml dùng giảm đau, kháng viêm trong các cơn đau liên quan đến: Căng cơ, bong gân, bầm tím, mỏi cơ, đau cơ, đau lưng, đau vai, viêm khớp, đau khớp. \n Methyl salicylate là thuốc kháng viêm dạng non-steroidal (NSAIDs) với đặc tính giảm đau và kháng viêm,l-Menthol tạo phản ứng làm mát từ đó có tác dụng giảm đau. Mã ATC: M02A. \n Methyl Salicylate được hấp thu qua da và được chuyển hóa rộng rãi thành Axit Salicylic, cho tác dụng trị liệu lên vùng da bị đau, một phần nhỏ được hấp thu vào cơ thể và được đào thải qua nước tiểu, chủ yếu là Axit Salicylic cũng như các chất chuyển hóa liên quan khác. \n l-Menthol được hấp thu nhanh vào da, cho tác dụng trị liệu ở nơi sử dụng, và được hấp thu vào cơ thể, chuyển hóa, đào thải nhanh qua nước tiểu và mật dưới dạng Glucuronide."
     },
     {
-      "id": 400002,
+      "id": "400002",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/IMG_2914_fa398f9285.jpg",
       "name": "Viên ngậm Strepsils Soothing mật ong & chanh giảm đau họng (2 vỉ x 12 viên) ",
       "price": "37.500",
@@ -854,7 +897,7 @@
       "uses": "Strepsils Soothing Honey & Lemon là viên ngậm chứa hai hoạt chất 2,4-dichlorobenzyl alcohol (dybenal) và amylmetacresol có tính kháng khuẩn sử dụng trong điều trị viêm họng. Viên ngậm Strepsils là viên ngậm kháng khuẩn để làm giảm đau họng dùng cho trẻ em và người lớn."
     },
     {
-      "id": 400003,
+      "id": "400003",
       "image": "https://thuocnha.com/Uploads/HinhSP/gaviscon-dual-action-reckitt-benckiser-h-24-goi-x-10ml.jpg",
       "name": "Hỗn dịch Gaviscon Reckitt Benckiser điều trị trào ngược dạ dày, thực quản",
       "price": "8.000",
@@ -871,7 +914,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 400004,
+      "id": "400004",
       "image": "https://nhathuocminhkhang.net/wp-content/uploads/2022/12/67-viartril-s-3.jpg",
       "name": "Thuốc Viartril-S 250mg Rottapharm giảm triệu chứng thoái hóa khớp",
       "price": "3.700",
@@ -888,7 +931,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 400005,
+      "id": "400005",
       "image": "https://cdn.thegioididong.com/Products/Images/10039/153396/gastropulgite-30goi-2-1.jpg",
       "name": "Bột Gastropulgite Ipsen điều trị rối loạn thực quản, dạ dày",
       "price": "3.700",
@@ -905,7 +948,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 400006,
+      "id": "400006",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/IMG_2078_4cb9ddbf55.jpg",
       "name": "Viên ngậm Star Benko OPV điều trị nhiễm khuẩn miệng, họng",
       "price": "48.000",
@@ -922,7 +965,7 @@
       "uses": "Điều trị tại chỗ các bệnh nhiễm khuẩn đường miệng họng như đau họng, viêm miệng, viêm nướu."
     },
     {
-      "id": 400007,
+      "id": "400007",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/IMG_6179_1da83b1ddd.jpg",
       "name": "Viên ngậm Star Sore Throat OPV không đường điều trị đau họng, viêm họng",
       "price": "53.000",
@@ -939,7 +982,7 @@
       "uses": "Điều trị tại chỗ các bệnh nhiễm khuẩn đường miệng họng như đau họng, viêm miệng, viêm nướu."
     },
     {
-      "id": 400008,
+      "id": "400008",
       "image": "https://trungsoncare.com/images/detailed/26/1_23ek-2b.png",
       "name": "Viên ngậm Star Cough Relief OPV giảm tạm thời triệu chứng ho",
       "price": "2.208",
@@ -956,7 +999,7 @@
       "uses": "Điều trị tại chỗ các bệnh nhiễm khuẩn đường miệng họng như đau họng, viêm miệng, viêm nướu."
     },
     {
-      "id": 400009,
+      "id": "400009",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00002353_deslotid_4059_624f_large_252c6f5627.jpg",
       "name": "Siro Deslotid OPV điều trị viêm mũi dị ứng, mày đay",
       "price": "45.000",
@@ -973,7 +1016,7 @@
       "uses": "Điều trị tại chỗ các bệnh nhiễm khuẩn đường miệng họng như đau họng, viêm miệng, viêm nướu."
     },
     {
-      "id": 4000010,
+      "id": "4000010",
       "image": "https://down-vn.img.susercontent.com/file/1728bde903cf401fb0afb9d49395306e",
       "name": "Livolin Forte Mega We Care điều trị viêm gan cấp, bán cấp và viêm gan mạn tính, xơ gan",
       "price": "5.000",
@@ -990,7 +1033,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000011,
+      "id": "4000011",
       "image": "https://vn.megawecare.com/wp-content/uploads/2022/04/Hinh-Packshot-2.jpg",
       "name": "Thuốc ho thảo dược Eugica",
       "price": "700",
@@ -1007,7 +1050,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000012,
+      "id": "4000012",
       "image": "https://vn.megawecare.com/wp-content/uploads/2022/06/Hinh-Packshot-3-1.jpg",
       "name": "Thuốc ho thảo dược Eugica Fort",
       "price": "800",
@@ -1024,7 +1067,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000013,
+      "id": "4000013",
       "image": "https://cdn.thegioididong.com/Products/Images/10029/131163/eugica-siro-100ml-hinh-2.jpg",
       "name": "Siro ho thảo dược Eugica",
       "price": "36.000",
@@ -1041,7 +1084,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000014,
+      "id": "4000014",
       "image": "https://prod-cdn.pharmacity.io/e-com/images/ecommerce/P12954_3.png",
       "name": "Avarino 300mg Mega Lifesciences điều trị rối loạn tiêu hoá",
       "price": "2.000",
@@ -1058,7 +1101,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000015,
+      "id": "4000015",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00003460_gofen_400ml_2721_63db_large_627db09b10.jpg",
       "name": "Thuốc Gofen 400 MEGA We care điều trị hạ sốt, giảm đau",
       "price": "2.000",
@@ -1075,7 +1118,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000016,
+      "id": "4000016",
       "image": "https://trungsoncare.com/images/detailed/16/2_xvs5-r3.png",
       "name": "Siro Ginkid Ho Cam NEW 80ml hỗ trợ bổ phế, giảm ho, nhuận phế",
       "price": "59.000",
@@ -1091,7 +1134,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000017,
+      "id": "4000017",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/gaggo1_36bc1b5e29.jpg",
       "name": "Thuốc GazGo MEGA We care điều trị khó chịu, căng đau, trướng bụng",
       "price": "6.000",
@@ -1108,7 +1151,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000018,
+      "id": "4000018",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09755_802626cbdb.jpg",
       "name": "Dầu Húng Chanh Lábebé",
       "price": "138.000",
@@ -1124,7 +1167,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000019,
+      "id": "4000019",
       "image": "https://trungsoncare.com/images/detailed/30/siro-daleston-d-tw3-2_g711-so.jpg",
       "name": "Siro Daleston-D TW3 chống dị ứng, chống viêm",
       "price": "24.000",
@@ -1141,7 +1184,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000020,
+      "id": "4000020",
       "image": "https://product.hstatic.net/200000124701/product/upload_a34fa6216412491e88887590ffc2d634.jpg",
       "name": "Siro Special Kid Anti-Allergies giúp giảm dị ứng, tăng cường sức đề kháng",
       "price": "254.000",
@@ -1157,7 +1200,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000021,
+      "id": "4000021",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/636x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00018934_special_kid_nez_gorge_eric_favre_125ml_1532_5ffe_large_69875af6c6.JPG",
       "name": "Siro Special Kid Nez & Gorge hỗ trợ giảm viêm họng, viêm phế quản",
       "price": "254.000",
@@ -1173,7 +1216,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000022,
+      "id": "4000022",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/IMG_3339_4b20fb8a2c.jpg",
       "name": "Thuốc xịt mũi Meseca Merap điều trị và dự phòng viêm mũi dị ứng",
       "price": "148.000",
@@ -1189,7 +1232,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 4000023,
+      "id": "4000023",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00017555_buderren_200_dose_100ml_9293_60a7_large_f25169c920.jpg",
       "name": "Bình xịt mũi Buderen 200 Dose 10ml điều trị viêm mũi dị ứng theo mùa",
       "price": "139.000",
@@ -1204,9 +1247,8 @@
       "specifications": "Hộp 30 gói.",
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
-
     {
-      "id": 500001,
+      "id": "500001",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/IMG_5021_f589bef948.jpg",
       "name": "Xịt mũi nước biển sâu Xisat 75ml xịt sạch thông mũi dùng cho người lớn",
       "price": "30.000",
@@ -1222,7 +1264,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 500002,
+      "id": "500002",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/IMG_5011_12a8b6415d.jpg",
       "name": "Xịt mũi nước biển sâu Xisat 75ml xịt sạch thông mũi dùng cho trẻ em",
       "price": "30.000",
@@ -1238,7 +1280,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 500003,
+      "id": "500003",
       "image": "https://cdn1.concung.com/storage/2023/11/1698835008-xisat-mockup2023-dauxitmoi.png",
       "name": "Nước biển sâu Xisat nhỏ sạch thông mũi cho trẻ sơ sinh",
       "price": "30.000",
@@ -1254,7 +1296,7 @@
       "uses": "Ðiều trị các triệu chứng của trào ngược dạ dày – thực quản như ợ nóng, khó tiêu và ợ chua liên quan đến sự trào ngược như sau bữa ăn, hoặc trong khi mang thai, hoặc trên những bệnh nhân có các triệu chứng liên quan với viêm thực quản do trào ngược."
     },
     {
-      "id": 500004,
+      "id": "500004",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_01815_0076bc598d.jpg",
       "name": "Xịt mũi muối biển Nano Sea Plus 75ml Phương Y Nam làm sạch, vệ sinh mũi, loại bỏ chất nhầy",
       "price": "30.000",
@@ -1270,7 +1312,7 @@
       "uses": "Muối biển kết hợp sodium bicarbonate (baking soda) giúp làm sạch, vệ sinh mũi, loại bỏ chất nhầy, bụi bẩn đọng lại do môi trường ô nhiễm, khói bụi,... tạo cảm giác thông thoáng, sảng khoái khi hít thở, hỗ trợ phòng ngừa nguy cơ mắc các vấn đề viêm mũi họng, hô hấp."
     },
     {
-      "id": 500005,
+      "id": "500005",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/7_93f8ded48c.jpg",
       "name": "Dung dịch vệ sinh mũi Fujisat i-on 70ml giảm đau, nhức, sưng đỏ",
       "price": "30.000",
@@ -1286,7 +1328,7 @@
       "uses": "Muối biển kết hợp sodium bicarbonate (baking soda) giúp làm sạch, vệ sinh mũi, loại bỏ chất nhầy, bụi bẩn đọng lại do môi trường ô nhiễm, khói bụi,... tạo cảm giác thông thoáng, sảng khoái khi hít thở, hỗ trợ phòng ngừa nguy cơ mắc các vấn đề viêm mũi họng, hô hấp."
     },
     {
-      "id": 500006,
+      "id": "500006",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00021304_bang_keo_ca_nhan_kids_band_pororo_4_size_20_mieng_8299_5f7f_large_e169f8e923.JPG",
       "name": "Băng keo cá nhân in hình Pororo Kids Band 4 size Young Chemical bảo vệ vết thương dành cho trẻ nhỏ",
       "price": "27.000",
@@ -1302,7 +1344,7 @@
       "uses": "Băng keo cá nhân Pororo Kids Band 4 size hộp 20 miếng với thiết kế gọn gàng, mỗi miếng băng keo được định vị đầu mở sẵn giúp người dùng sử dụng tiện lợi dễ dàng. Băng keo được tạo những khe hở nhỏ giúp việc thông thoáng khí với da được bảo đảm. Miếng gạc nằm gọn trong băng bảo đảm được việc ngăn cách hoàn toàn với vi khuẩn."
     },
     {
-      "id": 500007,
+      "id": "500007",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/800x0/filters:quality(95)/https://cms-prod.s3-sgn09.fptcloud.com/00021305_bang_keo_ca_nhan_kids_band_pororo_hop_thiec_2_size_25_mieng_8025_5f7f_large_e1ef74f997.jpg",
       "name": "Băng keo cá nhân in hình Pororo Kids Band 2 size Young Chemical bảo vệ vết thương dành cho trẻ nhỏ",
       "price": "45.000",
@@ -1318,7 +1360,7 @@
       "uses": "Băng keo cá nhân Pororo Kids Band 4 size hộp 20 miếng với thiết kế gọn gàng, mỗi miếng băng keo được định vị đầu mở sẵn giúp người dùng sử dụng tiện lợi dễ dàng. Băng keo được tạo những khe hở nhỏ giúp việc thông thoáng khí với da được bảo đảm. Miếng gạc nằm gọn trong băng bảo đảm được việc ngăn cách hoàn toàn với vi khuẩn."
     },
     {
-      "id": 500008,
+      "id": "500008",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00503071_mieng_dan_ha_sot_lion_hiepita_for_baby_6_goi_x_2_mieng_0_2_tuoi_7733_63b6_large_595674260b.jpg",
       "name": "Miếng dán Lion Hiepita For Baby giảm cơn sốt khó chịu, làm mát đến 8 giờ ",
       "price": "126.000",
@@ -1334,7 +1376,7 @@
       "uses": "Băng keo cá nhân Pororo Kids Band 4 size hộp 20 miếng với thiết kế gọn gàng, mỗi miếng băng keo được định vị đầu mở sẵn giúp người dùng sử dụng tiện lợi dễ dàng. Băng keo được tạo những khe hở nhỏ giúp việc thông thoáng khí với da được bảo đảm. Miếng gạc nằm gọn trong băng bảo đảm được việc ngăn cách hoàn toàn với vi khuẩn."
     },
     {
-      "id": 500009,
+      "id": "500009",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/may_do_duong_huyet_nipro_premier_alpha_225ee2564e.jpg",
       "name": "Máy đo đường huyết Nipro Premier Alpha giúp đo đường huyết một cách an toàn, nhanh chóng, chính xác",
       "price": "857.000",
@@ -1350,7 +1392,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000010,
+      "id": "5000010",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09800_c55707b9c0.jpg",
       "name": "Máy đo đường huyết Nipro Premier Alpha giúp đo đường huyết một cách an toàn, nhanh chóng, chính xác",
       "price": "1.548.000",
@@ -1366,7 +1408,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000011,
+      "id": "5000011",
       "image": "https://file.hstatic.net/1000236744/file/may-thu-duong-huyet-accu-chek-instant_daf6d1d966224d1ab2b3a65725c66f3d.jpg",
       "name": "Que thử đường huyết AccuChek Instant sử dụng cho các máy đo Roul-Chek Instant và Accu-Chek Instant S (25 cái)",
       "price": "249.000",
@@ -1382,7 +1424,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000012,
+      "id": "5000012",
       "image": "https://hstatic.net/966/1000037966/1/2015/12-20/may-do-duong-huyet-bayer-contour-plus-tuankiet.jpg",
       "name": "Que thử đường huyết Contour Plus Bayer (50 que)",
       "price": "407.000",
@@ -1398,7 +1440,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000013,
+      "id": "5000013",
       "image": "https://www.accu-chek.com.vn/sites/g/files/iut1071/f/guide-lancing-only-h400.png",
       "name": "Que thử đường huyết Accu-Chek Guide theo dõi đường huyết (25 que)",
       "price": "347.000",
@@ -1414,7 +1456,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000014,
+      "id": "5000014",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00017803_blood_glucose_test_strips_ts3300_mediusa_25s_que_thu_duong_huyet_4425_62b9_large_39bac2f8bf.JPG",
       "name": "Que thử đường huyết MediUSA TS3300 dùng cho máy đo đương huyết GM3300 kiểm tra nồng độ đường trong máu (25 cái)",
       "price": "298.000",
@@ -1430,7 +1472,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000015,
+      "id": "5000015",
       "image": "https://product.hstatic.net/1000285001/product/gm-3300_1024x1024.png",
       "name": "Máy đo đường huyết tự động MediUSA GM3300 thiết kế gọn nhẹ, thao tác sử dụng đơn giản",
       "price": "865.000",
@@ -1446,7 +1488,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000016,
+      "id": "5000016",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09784_7491e9a96a.jpg",
       "name": "Máy đo huyết áp điện tử bắp tay Yuwell YE680B cảnh báo rung nhĩ, ngăn ngừa đột quỵ",
       "price": "948.000",
@@ -1462,7 +1504,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000017,
+      "id": "5000017",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/2560x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09381_9b6bfa8108.jpg",
       "name": "Combo 3 hộp que thử đường huyết Easy Max (25 que - Tặng máy do đường huyết Easy Max Tag)",
       "price": "531.240",
@@ -1478,7 +1520,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000018,
+      "id": "5000018",
       "image": "https://product.hstatic.net/200000402457/product/au-trang-y-te-cao-cap-vinh-tien-kn95-3hmask-hop-10-cai-1726-60f9_large_3a5ba3765c4d42f485ac07aeb405dd0a_grande.jpeg",
       "name": "Khẩu trang y tế cao cấp 3Hmask KN95 Vĩnh Tiến màu trắng hỗ trợ ngăn khói, bụi, kháng khuẩn (10 cái)",
       "price": "50.000",
@@ -1494,7 +1536,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000019,
+      "id": "5000019",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00014865_khau_trang_3d_mask_virus_block_5_mieng_unicharm_3277_5c90_large_1bfb48f866.JPG",
       "name": "Khẩu trang y tế Mask Virus Block Unicharm 3 lớp hỗ trợ ngăn khói, bụi, kháng khuẩn (5 cái)",
       "price": "27.000",
@@ -1510,7 +1552,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000020,
+      "id": "5000020",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00032926_khau_trang_3d_mask_kids_unicharm_goi_5_cai_5276_62b4_large_a3f64ee9bf.jpg",
       "name": "Khẩu trang trẻ em 3D mask Kids Unicharm ngăn khói bụi, bụi mịn PM 2.5 (5 cái)",
       "price": "25.000",
@@ -1526,7 +1568,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000021,
+      "id": "5000021",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00500043_khau_trang_unicharm_3d_mask_max_block_nep_mui_sieu_bao_ve_size_m_goi_5_cai_1248_627f_large_d6d4885356.jpg",
       "name": "Khẩu trang y tế 3D Mask Max Block Unicharm size M hỗ trợ ngăn khói, bụi, kháng khuẩn (5 cái)",
       "price": "25.000",
@@ -1542,7 +1584,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000022,
+      "id": "5000022",
       "image": "https://drwin.hcm.fstorage.vn/images/092023/00030973_khau_trang_y_te_nguoi_lon_hamita_advanced_4d_mask_goi_5_cai_1910_62b9_large_f4caeb35ac_64m.jpg",
       "name": "Khẩu trang y tế Hamita Advanced 4D Mask màu trắng hỗ trợ ngăn khói, bụi, kháng khuẩn (5 cái)",
       "price": "25.000",
@@ -1558,7 +1600,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000023,
+      "id": "5000023",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00033694_khau_trang_y_te_hamita_advanced_4d_mask_mau_den_goi_5_cai_4325_638f_large_b209a84e8b.jpg",
       "name": "Khẩu trang y tế Hamita Advanced 4D Mask màu đen hỗ trợ ngăn khói, bụi, kháng khuẩn (5 cái)",
       "price": "25.000",
@@ -1574,7 +1616,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000024,
+      "id": "5000024",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00022764_khau_trang_mayan_3d_mask_kids_pm25_goi_5_cai_4702_62ae_large_58b09d2792.jpg",
       "name": "Khẩu trang Mayan 3D Mask Kids PM2.5 chống bụi PM2.5 và ngăn virus (5 cái)",
       "price": "25.000",
@@ -1590,7 +1632,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000025,
+      "id": "5000025",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00022144_khau_trang_3d_mask_medi_mayan_vpc_5_cai_9330_60dc_large_0b3e7acfda.jpg",
       "name": "Khẩu trang Mayan 3D Mask Màu Trắng lọc không khí ô nhiễm, ngăn 99% vi khuẩn (5 cái)",
       "price": "25.000",
@@ -1606,7 +1648,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000026,
+      "id": "5000026",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00502788_nhiet_ke_hong_ngoai_do_tran_microlife_nc200_7708_6391_large_84c0ed9d82.jpg",
       "name": "Nhiệt kế hồng ngoại đo trán Microlife NC200 không cần tiếp xúc, cho kết quả sau 1 giây",
       "price": "125.000",
@@ -1622,7 +1664,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000027,
+      "id": "5000027",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00021529_nhiet_ke_dien_tu_microlife_mt500_9788_62b4_large_0364e21838.JPG",
       "name": "Nhiệt kế điện tử Microlife MT500 đo nhiệt độ nhanh trong 30 giây, chống thấm nước",
       "price": "125.000",
@@ -1638,7 +1680,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000028,
+      "id": "5000028",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00017249_nhiet_ke_hong_ngoai_do_tran_fr1mf1_7252_62b9_large_bbfff144f2.JPG",
       "name": "Nhiệt kế hồng ngoại Microlife FR1MF1 đo không chạm, nhanh, an toàn và chính xác",
       "price": "990.000",
@@ -1654,7 +1696,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000029,
+      "id": "5000029",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09698_b252d0e8a7.jpg",
       "name": "Nhiệt kế điện tử Fuji DT007 để đo nhiệt độ cơ thể",
       "price": "990.000",
@@ -1670,7 +1712,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000030,
+      "id": "5000030",
       "image": "https://trungsoncare.com/images/detailed/16/1_7o6b-pa.png",
       "name": "Nhiệt kế đo ở trán Omron Forehead Thermometer MC-720 cho kết quả tức thì",
       "price": "945.000",
@@ -1686,7 +1728,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000031,
+      "id": "5000031",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00031629_beurer_ft90_nhiet_ke_hong_ngoai_do_khong_can_tiep_xuc_3857_62ad_large_8101a46871.jpg",
       "name": "Nhiệt kế điện tử Beurer Medical FT90 đo nhiệt độ trán không tiếp xúc, đo nhiệt độ của đồ vật và phòng",
       "price": "1.500.000",
@@ -1702,7 +1744,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000032,
+      "id": "5000032",
       "image": "https://medical.andprecision.com/wp-content/uploads/2017/04/UT-801-6.jpg",
       "name": "Nhiệt kế hồng ngoại đo tai, trán AND A&D Medical UT-801 đo nhanh, chính xác chỉ sau 1 giây",
       "price": "950.000",
@@ -1718,7 +1760,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 5000033,
+      "id": "5000033",
       "image": "https://www.pharmart.vn/images/product/origin/nhiet-ke-dien-tu-dau-cung-beurer-ft15-615196f0ec798.jpg",
       "name": "Nhiệt kế đầu mềm Beurer FT15 đo nhiệt độ nhanh trong khoảng 10 giây",
       "price": "165.000",
@@ -1733,10 +1775,8 @@
       "specifications": "Hộp 20 miếng",
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
-
-
     {
-      "id": 600001,
+      "id": "600001",
       "image": "https://product.hstatic.net/200000124701/product/32636_chi_nha_khoa_jomi_dental_floss_50mhop_1651_6182_large_721e8f3fcf_0ef845c5fdc34eafbb481563c9e2e676_master.jpg",
       "name": "Chỉ nha khoa Jomi Dental Floss loại trừ các mảng bám, thức ăn dư thừa trong kẽ răng (50m)",
       "price": "43.000",
@@ -1752,7 +1792,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600002,
+      "id": "600002",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00005585_chi_nha_khoa_oral_b_1214_6328_large_a5c1775c21.jpg",
       "name": "Chỉ nha khoa Oral-B Essential Floss làm sạch giữa các khe răng (6 cuộn)",
       "price": "51.000",
@@ -1768,7 +1808,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600003,
+      "id": "600003",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/636x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/00028056_chi_nha_khoa_okamura_ki_works_768300_40_met_3138_5f21_large_4260f3b737.JPG",
       "name": "Chỉ nha khoa Okamura Asahi làm sạch mảng bám thức ăn dư thừa trong kẽ răng (40m)",
       "price": "27.000",
@@ -1784,7 +1824,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600004,
+      "id": "600004",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/IMG_5222_f90ea8f7b5.jpg",
       "name": "Tăm chỉ kẽ răng Okamura làm sạch mảng bám thức ăn dư thừa trong kẽ răng (90 cây)",
       "price": "33.000",
@@ -1800,7 +1840,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600005,
+      "id": "600005",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00010345_tam_chi_ke_rang_hu_9494_62b3_large_5eab2ed09f.jpg",
       "name": "Tăm chỉ kẽ răng Okamura hỗ trợ làm sạch mảng bám thức ăn dư thừa (70 cây)",
       "price": "33.000",
@@ -1816,7 +1856,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600006,
+      "id": "600006",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/800x0/filters:quality(95)/https://cms-prod.s3-sgn09.fptcloud.com/d723bdfbd02b1bb64b2495a4c1b769a3_752770a9a3.jpg",
       "name": "Dụng cụ cạo lưỡi Okamura làm sạch mảng bám ở lưỡi, phòng bệnh nha chu, hôi miệng (12 vỉ x 5 cây)",
       "price": "294.000",
@@ -1832,7 +1872,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600007,
+      "id": "600007",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/DSC_02811_38d1fc053c.jpg",
       "name": "Bàn chải điện Oral-B Vitality Ultrathin D12.513 giúp làm sạch mảng bám trên răng, loại bỏ các vết ố răng",
       "price": "649.000",
@@ -1848,7 +1888,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600008,
+      "id": "600008",
       "image": "https://nhathuocphuongchinh.com/static/Product/ban-chai-danh-rang-dien-oral-b-pro-500-d16-513.jpg",
       "name": "Bàn chải đánh răng điện Oral-B Pro 500 Crossaction loại bỏ các mảng bám và vết ố trên răng",
       "price": "874.000",
@@ -1864,7 +1904,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 600009,
+      "id": "600009",
       "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/349/954/products/eb-60-2-1.jpg?v=1622001778480",
       "name": "Đầu chải răng người lớn Oral-B Ultrathin EB60 hỗ trợ làm sạch các mảng bám cứng đầu trên răng, chăm sóc nướu răng",
       "price": "286.000",
@@ -1880,7 +1920,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000010,
+      "id": "6000010",
       "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/310/112/products/4-caf36ce4-4557-4bea-819e-82f731f80a0c.jpg?v=1676821222743",
       "name": "Máy tăm nước cầm tay Halio Professional Cordless Oral Irrigator loại bỏ đến 99,99% vụn thức ăn bám dính",
       "price": "1.550.000",
@@ -1896,7 +1936,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000011,
+      "id": "6000011",
       "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/2560x0/filters:quality(90)/https://cms-prod.s3-sgn09.fptcloud.com/DSC_09843_3980cfea7a.jpg",
       "name": "Nước súc miệng Listerine Cool Mint bảo vệ khoang miệng suốt 24h khỏi vi khuẩn hôi miệng, mảng bám, viêm nướu (750ml)",
       "price": "80.000",
@@ -1912,7 +1952,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000012,
+      "id": "6000012",
       "image": "https://images.ctfassets.net/ebvu2motcdb0/5VHMtFw7f1WjvSRZvrfW8X/baad4991d4531cc80dabfd8d956424ee/24707_ls_750ml_greenday_new_pack_render_v1_gnt_front-vi-vn",
       "name": "Nước súc miệng Listerine Green Tea bảo vệ răng miệng suốt 24 giờ (250ml)",
       "price": "80.000",
@@ -1928,7 +1968,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000013,
+      "id": "6000013",
       "image": "https://medias.watsons.vn/publishing/WTCVN-BP_214434-front-zoom.jpg",
       "name": "Nước Súc Miệng Listerine Total Care Mouthwash 750ml",
       "price": "180.000",
@@ -1944,7 +1984,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000014,
+      "id": "6000014",
       "image": "https://medias.watsons.vn/publishing/WTCVN-213474-front-zoom.jpg?version=1714411891",
       "name": "Nước Súc Miệng Cho Răng Nhạy Cảm Listerine Total Care Sensitive 750ml",
       "price": "180.000",
@@ -1960,7 +2000,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000015,
+      "id": "6000015",
       "image": "https://medias.watsons.vn/publishing/WTCVN-212226-front-zoom.jpg?version=1737039726",
       "name": "Nước Súc Miệng Listerine Gum Care Giúp Nướu Chắc Khỏe Vị Gừng Thảo Mộc 750ml",
       "price": "152.000",
@@ -1976,7 +2016,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000016,
+      "id": "6000016",
       "image": "https://medias.watsons.vn/publishing/WTCVN-204822-front-zoom.jpg?version=1737039229",
       "name": "Nước Súc Miệng Làm Trắng Răng Listerine 750ml",
       "price": "152.000",
@@ -1992,7 +2032,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000017,
+      "id": "6000017",
       "image": "https://prod-cdn.pharmacity.io/e-com/images/ecommerce/20240528093228-0-P18080_1.jpg",
       "name": "Nước Súc Miệng Trẻ Em LISTERINE Vị Không Cay (Chai 250ml)",
       "price": "57.000",
@@ -2008,7 +2048,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000018,
+      "id": "6000018",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/20240528093226-0-P08888_1.jpg",
       "name": "Nước Súc Miệng LISTERINE Tartar Protection Giảm Mảng Bám (Chai 250ml)",
       "price": "57.000",
@@ -2024,7 +2064,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000019,
+      "id": "6000019",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/20240528093219-0-P25106_1.jpg",
       "name": "Nước Súc Miệng LISTERINE Total Care Sensititve Cho Răng Nhạy Cảm (Chai 250ml)",
       "price": "57.000",
@@ -2040,7 +2080,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000020,
+      "id": "6000020",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/20240528093224-0-P13363_1.jpg",
       "name": "Nước Súc Miệng LISTERINE Cool Mint Hơi Thở Thơm Mát (Chai 100ml)",
       "price": "57.000",
@@ -2056,7 +2096,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000021,
+      "id": "6000021",
       "image": "https://medias.watsons.vn/publishing/WTCVN-215655-front-zoom.jpg?version=1736779423",
       "name": "COLGATE Nước Súc Miệng Colgate Plax Fresh Tea 750ml",
       "price": "80.000",
@@ -2072,7 +2112,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000022,
+      "id": "6000022",
       "image": "https://medias.watsons.vn/publishing/WTCVN-215654-front-zoom.jpg?version=1736779449",
       "name": "COLGATE Nước Súc Miệng Colgate Plax Peppermint Fresh 750ml",
       "price": "80.000",
@@ -2088,7 +2128,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000023,
+      "id": "6000023",
       "image": "https://assets.unileversolutions.com/v1/53779836.png",
       "name": "P/S Nước Súc Miệng P/S Pro Complete Bảo Vệ Răng Miệng Tối Ưu 500ml",
       "price": "80.000",
@@ -2104,7 +2144,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000024,
+      "id": "6000024",
       "image": "https://image.hsv-tech.io/1987x0/bbx/common/0412299e-61d9-41a3-a841-15ec7f6fc88c.webp",
       "name": "P/S Nước Súc Miệng P/S Fresh Natural Bảo Vệ Răng Miệng Tối Ưu 500ml",
       "price": "80.000",
@@ -2120,7 +2160,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000025,
+      "id": "6000025",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P10408_3.jpg",
       "name": "Bàn Chải Đánh Răng P/S Muối Đá Himalaya",
       "price": "32.000",
@@ -2136,7 +2176,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000026,
+      "id": "6000026",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P04214_1.jpg",
       "name": "Dung dịch vệ sinh phụ nữ Lactacyd Soft And Silky hỗ trợ dưỡng ẩm, ngăn ngừa khô rát (250ml)",
       "price": "75.000",
@@ -2152,7 +2192,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000027,
+      "id": "6000027",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P04214_1.jpg",
       "name": "Dung dịch vệ sinh phụ nữ Lactacyd Soft And Silky hỗ trợ dưỡng ẩm, ngăn ngừa khô rát (250ml)",
       "price": "75.000",
@@ -2168,7 +2208,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000028,
+      "id": "6000028",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P27205_1.jpg",
       "name": "Dung dịch vệ sinh phụ nữ dưỡng ẩm và căng mịn Lactacyd Extra Nourish 250ml",
       "price": "75.000",
@@ -2184,7 +2224,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000029,
+      "id": "6000029",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/20241130033959-1-P04450_1.jpg?versionId=TYSnpNdbg8gN44dFLA_rqRWp0oGyxCjm",
       "name": "Dung Dịch Vệ Sinh Phụ Nữ LACTACYD Kháng Khuẩn Và Giảm Ngứa Pro Sensitive (250ml)",
       "price": "75.000",
@@ -2200,7 +2240,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000030,
+      "id": "6000030",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P02986_1.png",
       "name": "Sữa Tắm Gội Trẻ Em LACTACYD MILKY (250ml)",
       "price": "75.000",
@@ -2216,7 +2256,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000031,
+      "id": "6000031",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P18765_1.png",
       "name": "Sữa tắm giảm rôm sảy, hăm kẽ cho bé Lactacyd BB (Chai 250ml)",
       "price": "75.000",
@@ -2232,7 +2272,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000032,
+      "id": "6000032",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P17686_1.png",
       "name": "Sữa tắm gội cho bé Lactacyd Milky (500ml)",
       "price": "75.000",
@@ -2248,7 +2288,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000033,
+      "id": "6000033",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P21582_1.png",
       "name": "Dung dịch vệ sinh phụ nữ cao cấp hằng ngày Femfresh Daily Intimate Wash (250ml)",
       "price": "160.000",
@@ -2264,7 +2304,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000034,
+      "id": "6000034",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P21581_1.jpg",
       "name": "Dung dịch vệ sinh phụ nữ cao cấp Femfresh Soothing Wash (250ml)",
       "price": "160.000",
@@ -2280,7 +2320,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000035,
+      "id": "6000035",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P23145_4.jpg",
       "name": "Dung dịch vệ sinh phụ nữ cao cấp cho da nhạy cảm Femfresh 0% Sensitive Intimate Wash (Chai 250ml)",
       "price": "160.000",
@@ -2296,7 +2336,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000035,
+      "id": "6000035",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P23145_4.jpg",
       "name": "Dung dịch vệ sinh phụ nữ cao cấp cho da nhạy cảm Femfresh 0% Sensitive Intimate Wash (Chai 250ml)",
       "price": "160.000",
@@ -2312,7 +2352,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000036,
+      "id": "6000036",
       "image": "https://product.hstatic.net/200000851307/product/tam_bong_khang_khuan_kamicare_ve_sinh_tai__mui__200_que__0b721fa64a7e465ea74eeef6f87bcc0f_master.jpg",
       "name": "Tăm bông kháng khuẩn KamiCare vệ sinh tai, mũi (200 que)",
       "price": "25.000",
@@ -2328,7 +2368,7 @@
       "uses": "Máy đo đường huyết Nipro Premier Alpha sử dụng công nghệ CodeSens - một hệ thống không mã hóa giúp đơn giản hóa việc kiểm tra đường huyết, cho độ chính xác cao. Đồng thời cổng dữ liệu kết nối Bluetooth, cho phép chia sẻ và lưu trữ kết quả đường huyết qua ứng dụng FPT Medicare trên các thiết bị điện tử thông minh, giúp người dùng theo dõi kết quả đo đường huyết khoa học hơn."
     },
     {
-      "id": 6000037,
+      "id": "6000037",
       "image": "https://production-cdn.pharmacity.io/digital/828x828/plain/e-com/images/ecommerce/P22162_4.jpg",
       "name": "Sữa rửa mặt CETAPHIL Gentle Skin Cleanser giúp làm sạch và làm dịu da (Chai 250ml)",
       "price": "276.000",

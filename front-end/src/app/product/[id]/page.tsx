@@ -3,6 +3,7 @@
 import { Add, Remove } from '@mui/icons-material';
 import { Box, Button, CircularProgress, List, ListItem, ListItemText, Typography } from '@mui/material';
 import axios from 'axios';
+import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react'
 
@@ -39,6 +40,41 @@ function Product() {
   const [loading, setLoading] = useState(true)
   const [activeIndex, setActiveIndex] = useState(0)
   const [amount, setAmount] = useState(1)
+  const [user, setUser] = useState<User | null> (null)
+
+  const auth = getAuth()
+
+  useEffect(() => {
+    const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser)
+    })
+
+    return () => unsubcribe()
+  }, [auth])
+
+  const handleAddToCart = () => {
+    if (!product) return
+
+    if (!user || !user.uid) {
+      alert("Vui lòng đăng nhập để thêm sản phẩm vào giỏ hàng!")
+      return
+    }
+
+    axios
+      .post('http://localhost:3001/cart', {
+        user_id: user.uid,
+        product: product,
+        quantity: amount
+      })
+      .then((response) => {
+        if (response.status === 201) {
+          alert("Đã thêm vào giỏ hàng!")
+        }
+        else {
+          alert("Có lỗi xảy ra. Vui lòng thử lại sau!")
+        }
+      })
+  }
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const sectionRef = descriptions.map(() => useRef<HTMLElement>(null))
@@ -172,7 +208,7 @@ function Product() {
                 </Box>
               </Box>
 
-              <Button variant="contained" sx={{ px: 3, py: 2, mt: 3, fontSize: '16px', width: '250px', backgroundColor: '#344CB7', color: 'white', borderRadius: 8, display: 'flex', lineHeight: '1', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+              <Button onClick={() => handleAddToCart()} variant="contained" sx={{ px: 3, py: 2, mt: 3, fontSize: '16px', width: '250px', backgroundColor: '#344CB7', color: 'white', borderRadius: 8, display: 'flex', lineHeight: '1', justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
                 Thêm vào giỏ hàng
               </Button>
 
