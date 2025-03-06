@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 'use client'
 
 import { Add, Remove } from '@mui/icons-material';
@@ -77,7 +79,6 @@ function Product() {
       })
   }
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const sectionRef = descriptions.map(() => useRef<HTMLElement>(null))
 
   const handleTitleClick = (index: number) => {

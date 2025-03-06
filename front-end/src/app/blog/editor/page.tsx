@@ -15,7 +15,6 @@ function Editor() {
   const [title, setTitle] = useState("")
   const [imageUrl, setImageUrl] = useState("")
   const [description, setDescription] = useState("")
-  const [saved, setSaved] = useState(false)
   const [fontSize, setFontSize] = useState<string>("18px")
   const [loading, setLoading] = useState(false)
 
@@ -95,8 +94,7 @@ function Editor() {
       .post("http://localhost:3001/blog", postData)
       .then((response) => {
         if (response.status === 201) {
-          alert("Bài viết đã được lưu!");
-          setSaved(true);
+          alert("Bài viết đã được lưu!")
         }
       })
       .catch((error) => {
