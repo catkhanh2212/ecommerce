@@ -4,7 +4,7 @@ import { ExpandMore, FilterList } from '@mui/icons-material';
 import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardContent, CardMedia, Checkbox, Drawer, FormControlLabel, FormGroup, Pagination, Typography } from '@mui/material'
 import axios from 'axios';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 
 interface Product {
@@ -43,6 +43,7 @@ function Search() {
   const [sortOrder, setSortOrder] = useState<"asc" | "des" | null>(null)
   const [user, setUser] = useState<User | null>(null)
   const [openDrawer, setOpenDrawer] = useState(false)
+  const [keyword, setKeyword] = useState<string>('')
 
 
   const auth = getAuth()
@@ -58,9 +59,17 @@ function Search() {
 
   const router = useRouter()
 
-  const searchParams = useSearchParams();
-  const keyword = searchParams.get("keyword")
+  // const searchParams = useSearchParams();
+  // const keyword = searchParams.get("keyword")
 
+  useEffect(() => {
+    const searchParams = new URLSearchParams(window.location.search)
+    const keyword = searchParams.get("keyword")
+    if (keyword !== null) {
+      setKeyword(keyword)
+    }
+  }, [])
+  
   console.log('keyword', keyword)
 
   useEffect(() => {
