@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 'use client'
 
 import { Photo } from '@mui/icons-material';

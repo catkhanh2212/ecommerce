@@ -72,7 +72,7 @@ function Search() {
       .catch((error) => {
         console.error("Lỗi khi lấy sản phẩm:", error);
       });
-  }, [])
+  }, [keyword])
 
   useEffect(() => {
     // Lọc sản phẩm trên frontend

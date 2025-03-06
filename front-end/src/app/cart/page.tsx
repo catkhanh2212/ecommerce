@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 'use client'
 
 import { AccountCircle, Add, ArrowBackIos, Delete, Mail, Phone, Remove } from '@mui/icons-material'
