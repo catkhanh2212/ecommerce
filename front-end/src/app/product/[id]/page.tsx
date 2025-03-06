@@ -69,6 +69,7 @@ function Product() {
       .then((response) => {
         if (response.status === 201) {
           alert("Đã thêm vào giỏ hàng!")
+          window.dispatchEvent(new Event('update-cart-amount'))
         }
         else {
           alert("Có lỗi xảy ra. Vui lòng thử lại sau!")
@@ -127,15 +128,15 @@ function Product() {
 
 
   return (
-    <Box sx={{ backgroundColor: "#F7F7F7", padding: 4, px: 8 }}>
+    <Box sx={{ backgroundColor: "#F7F7F7", padding: {xs: 2, md: 4}, px: 8 }}>
       <Box sx={{ display: 'flex', gap: 2, color: '#2D336B' }}>
         <Typography sx={{ cursor: 'pointer' }}>Trang chủ / </Typography>
         <Typography sx={{ cursor: 'pointer' }}>{product.category} / </Typography>
         <Typography sx={{ cursor: 'pointer' }}>{product.sub_category} </Typography>
       </Box>
 
-      <Box sx={{ backgroundColor: 'white', padding: 5, my: 5, borderRadius: 4, display: 'flex', gap: 3, }}>
-        <Box sx={{ width: '20.5%', color: '#9AA6B2' }}>
+      <Box sx={{ backgroundColor: 'white', padding: {xs: 4, md: 5}, my: {xs: 2, md: 5}, borderRadius: 4, display: 'flex', gap: 3, }}>
+        <Box sx={{ width: '20.5%', color: '#9AA6B2', display: {xs: 'none', md: 'block'} }}>
           <List>
             {descriptions.map((item, index) => (
               <ListItem
@@ -159,19 +160,19 @@ function Product() {
           </List>
         </Box>
 
-        <Box sx={{ width: '79.5%' }}>
-          <Box ref={sectionRef[0]} sx={{ display: 'flex', gap: 2, p: 0, m: 0 }}>
-            <Box sx={{ width: '47.5%' }}>
-              <img src={product.image} alt={product.name} width={400} />
+        <Box sx={{ width: {xs: '100%', md: '79.5%'} }}>
+          <Box ref={sectionRef[0]} sx={{ display: 'flex', gap: 2, p: 0, m: 0, flexDirection: { xs: 'column', md: 'row' } }}>
+            <Box sx={{ width: {xs: '100%', md: '47.5%'}, alignItems: 'center', m: 'auto', justifyContent: 'center', textAlign: 'center' }}>
+              <img src={product.image} alt={product.name} style={{ maxWidth: '100%', height: 'auto' }} />
             </Box>
 
-            <Box sx={{ width: '52.5%' }}>
+            <Box sx={{ width: {xs: '100%', md: '52.5%'}}}>
               <Box sx={{ display: 'flex', gap: 2, mb: 1.5 }}>
                 <Typography sx={{ fontWeight: '600', fontSize: '18px' }} >Thương hiệu: </Typography>
                 <Typography sx={{ color: '#5272F2', fontWeight: 'bold', fontSize: '18px' }} > {product.brand} </Typography>
               </Box>
 
-              <Typography sx={{ color: '#2A3335', fontSize: '32px' }}>{product.name}</Typography>
+              <Typography sx={{ color: '#2A3335', fontSize: {xs: '28px', md: '32px'} }}>{product.name}</Typography>
 
               <Typography sx={{ color: '#4C585B', mt: 0.5, mb: 0.5 }}>{product.id}</Typography>
 

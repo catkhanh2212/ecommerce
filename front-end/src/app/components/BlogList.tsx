@@ -1,59 +1,79 @@
-import { ArrowRight } from '@mui/icons-material'
-import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material'
-import React from 'react'
+'use client'
+
+import { ArrowRight } from "@mui/icons-material";
+import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 interface Blog {
-    id: number,
-    image: string,
-    name: string,
-    date: string,
-    intro: string,
-    title1: string,
-    para1: string,
-    para1subpara1: string,
-    para1subpara2: string,
-    para1subtitle3: string,
-    para1subpara3: string,
-    title2: string,
-    para2: string,
-    title3: string,
-    para3: string,
+  id: string;
+  title: string;
+  description: string;
+  content: string;
+  createdAt: string;
 }
 
 interface BlogListProps {
-    blogList: Blog[]
+  blogList: Blog[];
 }
 
+// Hàm trích xuất hình ảnh đầu tiên từ content (HTML)
+const extractFirstImage = (htmlContent: string): string | null => {
+  const match = htmlContent.match(/<img\s+src=["'](.*?)["']/);
+  return match ? match[1] : null;
+};
 
 const BlogList: React.FC<BlogListProps> = ({ blogList }) => {
-    return (
-        <Box display='grid' gridTemplateColumns='repeat(4, 1fr)' gap='16px' sx={{ mt: 3, borderRadius: 2 }}>
-            {blogList.map((blog) => (
-                <Card key={blog.id} sx={{ cursor: 'pointer', px: 2, paddingTop: 2 }}>
-                    <CardMedia component='img' height='250' image={blog.image} sx={{ borderRadius: 2 }} />
-                    <CardContent>
-                        <Typography sx={{ fontWeight: 'bold', fontSize: '18px' }}>{blog.name}</Typography>
-                        <Typography
-                            sx={{
-                                mt: 2,
-                                color: '#4C585B',
-                                display: '-webkit-box',
-                                WebkitLineClamp: 2, // Giới hạn 2 dòng
-                                WebkitBoxOrient: 'vertical',
-                                overflow: 'hidden',
-                                textOverflow: 'ellipsis',
-                            }}>
-                            {blog.intro}
-                        </Typography>
-                        <Typography sx={{color: '#0A5EB0', fontWeight: 'bold', display: 'flex', gap: 2, mt: 2}}>
-                            Read more
-                            <ArrowRight />
-                        </Typography>
-                    </CardContent>
-                </Card>
-            ))}
-        </Box>
-    )
-}
+  const router = useRouter()
 
-export default BlogList
+  const handleClick = (id: string) => {
+    router.push(`/blog/${id}`)
+  }
+  return (
+    <Box
+      display="grid"
+      gridTemplateColumns={{
+        xs: "repeat(1, 1fr)",
+        md: "repeat(4, 1fr)"
+      }}
+      gap= {{xs: '10px', md: "16px"}}
+      sx={{ mt: 3, borderRadius: 2 }}>
+      {blogList.map((blog) => {
+        const image = extractFirstImage(blog.content) || "/default-image.jpg"; // Nếu không có ảnh, dùng ảnh mặc định
+        return (
+          <Card key={blog.id} onClick={() => handleClick(blog.id)} sx={{ cursor: "pointer", px: 2, paddingTop: 2 }}>
+            <CardMedia component="img" width="250" image={image} sx={{ borderRadius: 2 }} />
+            <CardContent>
+              <Typography sx={{
+                fontWeight: "bold", fontSize: "18px", display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}>{blog.title}</Typography>
+              <Typography
+                sx={{
+                  mt: 1,
+                  color: "#4C585B",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 2, // Giới hạn 2 dòng
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                {blog.description}
+              </Typography>
+              <Typography sx={{ color: "#0A5EB0", fontWeight: "bold", display: "flex", gap: 2, mt: 1 }}>
+                Read more
+                <ArrowRight />
+              </Typography>
+            </CardContent>
+          </Card>
+        );
+      })}
+    </Box>
+  );
+};
+
+export default BlogList;

@@ -17,11 +17,11 @@ function ContactForm() {
   }
   return (
     <Box sx={{ borderRadius: 2, backgroundColor: '#D4EBF8', padding: 3 }}>
-      <Typography variant='h5' sx={{ color: '#0A5EB0', fontWeight: 'bold', textAlign: 'center', mb: 3 }}>Schedule consultation</Typography>
+      <Typography variant='h5' sx={{ color: '#0A5EB0', fontWeight: 'bold', textAlign: 'center', mb: 3 }}>Đặt lịch khám bệnh online</Typography>
 
       <TextField
         fullWidth
-        placeholder='Full name'
+        placeholder='Họ và tên'
         variant='outlined'
         name='name'
         value={formData.name}
@@ -50,7 +50,7 @@ function ContactForm() {
 
       <TextField
         fullWidth
-        placeholder='Phone number'
+        placeholder='Số điện thoại'
         variant='outlined'
         name='phone'
         value={formData.phone}
@@ -108,7 +108,7 @@ function ContactForm() {
 
       <TextField
         fullWidth
-        placeholder='Quick description of your issue'
+        placeholder='Mô tả ngắn về vấn đề cần tư vấn'
         variant='outlined'
         name='issue'
         value={formData.issue}
@@ -135,15 +135,15 @@ function ContactForm() {
         }}
       />
 
-      <Typography sx={{ fontSize: '14px', color: '#4C585B', mb: 2 }}> * The consultation will take place on Zoom. We will schedule the appointment and send detailed information to your email. </Typography>
+      <Typography sx={{ fontSize: '14px', color: '#4C585B', mb: 2 }}> * Bác sĩ sẽ trao đổi khám bệnh thông qua Zoom. Chúng tôi sẽ lên lịch hẹn khám và gửi thông tin chi tiết qua email của bạn. </Typography>
 
       <Button
         fullWidth
         sx={{
-          mb: 1,
+          display: 'flex',
           alignItems: 'center',
           color: 'white',
-          fontSize: '14px',
+          fontSize: '16px',
           backgroundColor: '#5272F2',
           textTransform: "none",
           "&:hover": {
@@ -151,7 +151,7 @@ function ContactForm() {
           },
           transition: "all 0.3s ease",
         }}>
-        SUBMIT
+        GỬI THÔNG TIN
       </Button>
     </Box>
   )

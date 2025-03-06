@@ -6,8 +6,8 @@ import { ourChoicesProducts } from '@/app/api/data/ourchoices'
 
 function OurChoice() {
   return (
-    <Box sx={{ paddingX: 5, paddingTop: 5 }}>
-        <SectionTitle title='OUR CHOICES' />
+    <Box sx={{ paddingX: {xs: 2, md: 5}, paddingTop: 5 }}>
+        <SectionTitle title='LỰA CHỌN CỦA NHÀ THUỐC' />
         <ProductCard productCards={ourChoicesProducts} />
     </Box>
   )

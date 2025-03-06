@@ -39,3 +39,10 @@ a {
     color-scheme: dark;
   }
 }
+
+.ProseMirror {
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+}
+

@@ -1,7 +1,8 @@
 'use client'
 
-import { AccountCircle, ArrowDropDown, Discount, LocalHospital, ShoppingCart } from '@mui/icons-material'
-import { Avatar, Box, Button, Modal, Popover, TextField, Typography } from '@mui/material'
+import { AccountCircle, ArrowDropDown, Book, Menu, LocalHospital, ShoppingCart, AppRegistration } from '@mui/icons-material'
+import { Avatar, Box, Button, Drawer, IconButton, List, ListItem, ListItemText, Modal, Popover, TextField, Typography } from '@mui/material'
+import axios from 'axios';
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, User } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
@@ -16,6 +17,31 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+interface Product {
+  id: number;
+  image: string;
+  name: string;
+  price: string;
+  unit: string;
+  category: string;
+  sub_category: string;
+  brand: string;
+  origin: string;
+  dosage: string;
+  alert: string;
+  preserve: string;
+  ingredient: string;
+  specifications: string;
+  uses: string;
+}
+
+interface Cart {
+  id: number,
+  user_id: string,
+  product: Product,
+  quantity: number
+}
+
 const categoryMapping: Record<string, string> = {
   'thuc-pham-chuc-nang': 'Thực phẩm chức năng',
   'thuoc': 'Thuốc',
@@ -28,6 +54,53 @@ function Header() {
   const [anchorLogout, setAnchorLogout] = useState<HTMLElement | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [amountItems, setAmountItems] = useState<number>(0)
+  const [keyword, setKeyword] = useState<string>('')
+  const [openDrawer, setOpenDrawer] = useState(false)
+  const [owner, setOwner] = useState(false)
+
+  useEffect(() => {
+    const updateCart = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3001/cart?user_id=${user?.uid}`, {
+          headers: { 'Cache-Control': 'no-cache' }, // Tránh lấy cache cũ
+        });
+
+        const cartItems: Cart[] = response.data;
+        setAmountItems(cartItems.length); // Cập nhật ngay lập tức
+      } catch (error) {
+        console.error("error: ", error);
+      }
+    };
+
+    updateCart();
+
+    window.addEventListener('update-cart-amount', updateCart);
+
+    return () => window.removeEventListener('update-cart-amount', updateCart);
+  }, [user?.uid]); // Theo dõi user ID, mỗi khi user thay đổi thì gọi lại API
+
+
+  const handleSearch = () => {
+    if (keyword.trim()) {
+      const queryParams = new URLSearchParams()
+      queryParams.append("keyword", keyword)
+
+      const queryString = queryParams.toString()
+
+      console.log("query string: ", queryString)
+      const path = `/search?${queryString}`
+
+      router.push(path)
+    }
+  }
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleSearch()
+    }
+  }
+
 
   const router = useRouter()
 
@@ -37,6 +110,14 @@ function Header() {
 
   const handleCartClick = () => {
     router.push('/cart')
+  }
+
+  const handleBlogClick = () => {
+    router.push('/blog')
+  }
+
+  const handleManageClick = () => {
+    router.push('/manage')
   }
 
   const handleCategoryClick = (categoryLabel: string) => {
@@ -58,7 +139,7 @@ function Header() {
       const queryParams = new URLSearchParams()
       if (subCategory) queryParams.append("sub_category", subCategory)
 
-      
+
 
       const queryString = queryParams.toString()
 
@@ -81,13 +162,17 @@ function Header() {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      console.log("User từ Firebase:", currentUser);
-    });
+      setUser(currentUser)
+      console.log("User từ Firebase:", currentUser)
+
+      if (currentUser?.email === 'hrin2211@gmail.com') {
+        setOwner(true)
+      }
+    })
 
     return () => unsubscribe(); // Cleanup listener khi unmount
-  }, []);
-  
+  }, [])
+
 
   const handleLogin = () => {
     signInWithPopup(auth, provider)
@@ -99,7 +184,7 @@ function Header() {
         console.error("Lỗi đăng nhập: ", error);
       });
   };
-  
+
 
   const handleLogout = () => {
     signOut(auth).then(() => {
@@ -116,12 +201,13 @@ function Header() {
     } else {
       setModalOpen(true); // Mở Modal khi chưa đăng nhập
     }
-  };
+  }
+
 
   return (
     <Box
       sx={{
-        paddingX: 16,
+        paddingX: { xs: 2, md: 16 },
         paddingY: 2,
         backgroundColor: '#5272F2',
         display: 'flex',
@@ -130,9 +216,20 @@ function Header() {
       }}>
 
       {/* Logo */}
-      <Typography onClick={() => handleHomeClick()} sx={{ fontFamily: "'Philosopher', Arial, Helvetica, sans-serif", fontSize: '28px', fontWeight: 'bold', color: 'white', cursor: 'pointer' }}>
+      <Typography onClick={() => handleHomeClick()} sx={{ fontFamily: "'Philosopher', Arial, Helvetica, sans-serif", fontSize: '28px', fontWeight: 'bold', color: 'white', cursor: 'pointer', display: { xs: 'none', md: 'block' } }}>
         GiaKhanh
       </Typography>
+
+      {/* Hamburger Menu - Chỉ hiển thị trên màn hình nhỏ */}
+      <IconButton
+        sx={{
+          display: { xs: 'block', md: 'none' }, // Chỉ hiển thị trên mobile
+          color: 'white'
+        }}
+        onClick={() => setOpenDrawer(true)}
+      >
+        <Menu />
+      </IconButton>
 
       {/* Search Section */}
       <Box
@@ -157,7 +254,7 @@ function Header() {
           onClick={handleOpen}
         >
           <Typography sx={{ color: '#4C585B', fontSize: '16px' }}>
-            Categories
+            Phân loại
           </Typography>
           <ArrowDropDown sx={{ color: '#5272F2' }} />
         </Box>
@@ -166,6 +263,9 @@ function Header() {
         <TextField
           placeholder='Search for medicine...'
           variant='standard'
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)}
+          onKeyDown={handleKeyPress}
           InputProps={{ disableUnderline: true }}
           sx={{
             flex: 1
@@ -207,7 +307,7 @@ function Header() {
               <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Hỗ trợ sinh lý")} sx={{ cursor: 'pointer' }}>Hỗ trợ sinh lý</Typography>
               <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Nhóm thần kinh")} sx={{ cursor: 'pointer' }}>Nhóm thần kinh</Typography>
               <Typography onClick={() => handleSubCategoryClick("Thực phẩm chức năng", "Giảm cân")} sx={{ cursor: 'pointer' }}>Giảm cân</Typography>
-            </Box> 
+            </Box>
 
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <Typography onClick={() => handleCategoryClick("Dụng cụ y tế")} sx={{ fontWeight: 'bold', mb: 1, cursor: 'pointer' }}>DỤNG CỤ Y TẾ:</Typography>
@@ -227,55 +327,154 @@ function Header() {
         </Popover>
       </Box>
 
-      {/* Offer */}
-      <Box
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          color: 'white',
-          gap: 1,
-          cursor: 'pointer'
-        }}>
-        <Discount />
-        <Typography sx={{ fontSize: '16px' }}>Offers</Typography>
-      </Box>
-
       {/* Cart */}
+      {owner === false ? (
+        <Box
+          onClick={() => handleCartClick()}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            color: 'white',
+            gap: 1,
+            cursor: 'pointer',
+          }}>
+          <Box sx={{ position: 'relative' }}>
+            <ShoppingCart />
+            <Box sx={{ position: 'absolute', top: 0, right: 0, transform: 'translate(50%, -70%)', p: 0.5, px: 0.8, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px', borderRadius: 50, backgroundColor: '#E195AB' }}>
+              {amountItems}
+            </Box>
+          </Box>
+
+          <Typography sx={{ fontSize: '16px', display: { xs: 'none', md: 'block' } }}>Giỏ hàng</Typography>
+        </Box>
+      ) :
+        (
+          <Box
+            onClick={() => handleManageClick()}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              color: 'white',
+              gap: 1,
+              cursor: 'pointer',
+            }}>
+            <Box sx={{ position: 'relative' }}>
+              <AppRegistration />
+            </Box>
+
+            <Typography sx={{ fontSize: '16px', display: { xs: 'none', md: 'block' } }}>Quản lí</Typography>
+          </Box>
+        )}
+
+
       <Box
-        onClick = {() => handleCartClick()}
         sx={{
-          display: 'flex',
+          display: { xs: 'none', md: 'flex' },
           alignItems: 'center',
-          color: 'white',
-          gap: 1,
-          cursor: 'pointer'
-        }}>
-        <ShoppingCart />
-        <Typography sx={{ fontSize: '16px' }}>Cart</Typography>
+          gap: 3
+        }}
+      >
+
+        {/* Blog */}
+        <Box
+          onClick={() => handleBlogClick()}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            color: 'white',
+            gap: 1,
+            cursor: 'pointer'
+          }}>
+          <Book />
+          <Typography sx={{ fontSize: '16px', display: { xs: 'none', md: 'block' } }}>Blogs</Typography>
+        </Box>
+
+        {/* Account */}
+        <Box
+          onClick={handleAccountClick}
+          sx={{
+            display: 'flex',
+            alignItems: 'center',
+            color: 'white',
+            gap: 1,
+            cursor: 'pointer'
+          }}>
+          {user ? (
+            <>
+              <Avatar src={user.photoURL || ''} sx={{ width: '32px', height: '32px' }} />
+              <Typography sx={{ fontSize: '16px', display: { xs: 'none', md: 'block' } }}>{user.displayName}</Typography>
+            </>
+          ) : (
+            <>
+              <AccountCircle />
+              <Typography sx={{ fontSize: '16px', display: { xs: 'none', md: 'block' } }}>Xin chào, Đăng nhập</Typography>
+            </>
+          )}
+        </Box>
+
       </Box>
 
-      {/* Account */}
-      <Box
-        onClick={handleAccountClick}
-        sx={{
-          display: 'flex',
-          alignItems: 'center',
-          color: 'white',
-          gap: 1,
-          cursor: 'pointer'
-        }}>
-        {user ? (
-          <>
-            <Avatar src={user.photoURL || ''} sx={{ width: '32px', height: '32px' }} />
-            <Typography sx={{ fontSize: '16px' }}>{user.displayName}</Typography>
-          </>
-        ) : (
-          <>
-            <AccountCircle />
-            <Typography sx={{ fontSize: '16px' }}>Hello, Log in</Typography>
-          </>
-        )}
-      </Box>
+
+
+      {/* Drawer (Menu Trượt) */}
+      <Drawer anchor="right" open={openDrawer} onClose={() => setOpenDrawer(false)}>
+        <List sx={{ width: 250 }}>
+          {/* Blog */}
+          <ListItem
+            component="button"
+            onClick={handleHomeClick}
+            sx={{
+              backgroundColor: 'transparent',
+              border: 'none',
+              '&:hover': { backgroundColor: 'transparent' },
+              '&:focus': { backgroundColor: 'transparent' },
+            }}
+          >
+            <Typography sx={{ fontFamily: "'Philosopher', Arial, Helvetica, sans-serif", fontSize: '28px', fontWeight: 'bold', color: '#344CB7', cursor: 'pointer' }}>
+              GiaKhanh
+            </Typography>
+          </ListItem>
+
+          <ListItem
+            onClick={handleBlogClick}
+            sx={{
+              backgroundColor: 'transparent',
+              border: 'none',
+              '&:hover': { backgroundColor: 'transparent' },
+              '&:focus': { backgroundColor: 'transparent' },
+            }}
+          >
+            <Book sx={{ marginRight: 2 }} />
+            <ListItemText primary="Blogs" />
+          </ListItem>
+
+          {/* Account */}
+          <ListItem onClick={() => handleAccountClick}>
+            <Box
+              onClick={handleAccountClick}
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                color: 'black',
+                gap: 1,
+                cursor: 'pointer'
+              }}>
+              {user ? (
+                <>
+                  <Avatar src={user.photoURL || ''} sx={{ width: '32px', height: '32px' }} />
+                  <Typography sx={{ fontSize: '16px', display: { xs: 'none', md: 'block', color: 'black' } }}>{user.displayName}</Typography>
+                </>
+              ) : (
+                <>
+                  <AccountCircle />
+                  <Typography sx={{ fontSize: '16px', color: 'black', ml: 1 }}>Xin chào, Đăng nhập</Typography>
+                </>
+              )}
+            </Box>
+          </ListItem>
+        </List>
+      </Drawer>
+
 
       {/* Modal Login */}
       <Modal

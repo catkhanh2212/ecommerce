@@ -1,13 +1,12 @@
 'use client'
 
 import { ExpandMore, FilterList } from '@mui/icons-material';
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardContent, CardMedia, Checkbox, CircularProgress, Drawer, FormControlLabel, FormGroup, Pagination, Typography } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Card, CardContent, CardMedia, Checkbox, Drawer, FormControlLabel, FormGroup, Pagination, Typography } from '@mui/material'
 import axios from 'axios';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
-import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
 
-// Interface sản phẩm
 interface Product {
   id: number;
   image: string;
@@ -33,64 +32,15 @@ interface Cart {
   quantity: number
 }
 
-const categoryMapping: Record<string, string> = {
-  'thuc-pham-chuc-nang': 'Thực phẩm chức năng',
-  'thuoc': 'Thuốc',
-  'dung-cu-y-te': 'Dụng cụ y tế',
-  'cham-soc-ca-nhan': 'Chăm sóc cá nhân'
-};
-
-const subcategoryMapping: Record<string, string[]> = {
-  "dung-cu-y-te": [
-    "Máy đo đường huyết",
-    "Nhiệt kế",
-    "Máy đo huyết áp",
-    "Khẩu trang",
-    "Dụng cụ vệ sinh mũi",
-    "Khác",
-  ],
-  "cham-soc-ca-nhan": [
-    "Chăm sóc răng miệng",
-    "Vệ sinh cá nhân",
-  ],
-  "thuc-pham-chuc-nang": [
-    "Dành cho trẻ em",
-    "Chăm sóc sắc đẹp",
-    "Hỗ trợ tim mạch",
-    "Hỗ trợ tiêu hóa",
-    "Nhóm mắt - tai - mũi",
-    "Vitamin và khoáng chất",
-    "Hỗ trợ sinh lý",
-    "Nhóm thần kinh",
-    "Giảm cân",
-  ],
-  "thuoc": [
-    "Kháng sinh",
-    "Hạ sốt - giảm đau - chống viêm",
-    "Dị ứng",
-    "Trị ho",
-    "Tiêu hóa",
-    "Huyết áp tim mạch",
-    "Gan",
-    "Xương khớp",
-    "Tránh thai, rối loạn kinh nguyệt",
-  ],
-};
-
 const ITEMS_PER_PAGE = 12
 
-function Category() {
-  const params = useParams(); // ⚠️ useParams() có thể trả về string | string[]
-  const category_name = Array.isArray(params.category_name) ? params.category_name[0] : params.category_name;
-  const [products, setProducts] = useState<Product[] | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [page, setPage] = useState<number>(1);
-  const [selectedPriceRange, setSelectedPriceRange] = useState<[number, number] | null>(null);
-  const [selectedSubCategory, setSelectedSubCategory] = useState<string[]>([])
+function Search() {
+  const [selectedPriceRange, setSelectedPriceRange] = useState<[number, number] | null>(null)
   const [selectedOrigin, setSelectedOrigin] = useState<string[]>([])
+  const [page, setPage] = useState<number>(1)
+  const [products, setProducts] = useState<Product[] | null>(null)
+  const [searchedProducts, setSearchedProducts] = useState<Product[]>([])
   const [sortOrder, setSortOrder] = useState<"asc" | "des" | null>(null)
-  const searchParams = useSearchParams()
-  const subCategoryParam = searchParams.get("sub_category")
   const [user, setUser] = useState<User | null>(null)
   const [openDrawer, setOpenDrawer] = useState(false)
 
@@ -105,7 +55,93 @@ function Category() {
     return () => unsubcribe()
   }, [auth])
 
+
   const router = useRouter()
+
+  const searchParams = useSearchParams();
+  const keyword = searchParams.get("keyword")
+
+  console.log('keyword', keyword)
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/products")
+      .then((response) => {
+        setProducts(response.data);
+        console.log("keyword: ", keyword)
+      })
+      .catch((error) => {
+        console.error("Lỗi khi lấy sản phẩm:", error);
+      });
+  }, [])
+
+  useEffect(() => {
+    // Lọc sản phẩm trên frontend
+    if (keyword) {
+      const results = products?.filter((product) =>
+        product.name.toLowerCase().includes(keyword.toLowerCase())
+      );
+      if (results) {
+        setSearchedProducts(results)
+      }
+    }
+  }, [keyword, products])
+
+
+  const filterProducts = searchedProducts?.filter((product) => {
+    if (selectedPriceRange) {
+      const price = Number(product.price.replace(/[.,]/g, ""));
+      if (price < selectedPriceRange[0] || price > selectedPriceRange[1]) {
+        return false
+      }
+    }
+
+    if (selectedOrigin.length > 0 && !selectedOrigin.includes(product.origin)) {
+      return false
+    }
+
+    return true;
+  })
+
+  const sortedProducts = filterProducts?.slice().sort((a, b) => {
+    const priceA = Number(a.price.replace(/[,.]/g, ''))
+    const priceB = Number(b.price.replace(/[,.]/g, ''))
+
+    if (sortOrder === 'asc') return priceA - priceB
+    if (sortOrder === 'des') return priceB - priceA
+
+    return 0
+  })
+
+  const totalPages = filterProducts ? Math.ceil(filterProducts.length / ITEMS_PER_PAGE) : 0
+
+  const displayedProducts = sortedProducts?.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
+
+  const handlePriceFilter = (min: number, max: number | null) => {
+    setSelectedPriceRange((prevRange) => {
+      const newRange: [number, number] = max !== null ? [min, max] : [min, Infinity];
+
+      // Nếu nhấn lại cùng một khoảng giá thì bỏ filter (trở về null)
+      if (prevRange && prevRange[0] === newRange[0] && prevRange[1] === newRange[1]) {
+        setPage(1);
+        return null;
+      }
+
+      setPage(1);
+      return newRange;
+    })
+  }
+
+  const handleOriginFilter = (origin: string) => {
+    setSelectedOrigin((prev) =>
+      prev.includes(origin)
+        ? prev.filter((item) => item != origin)
+        : [...prev, origin]
+    )
+  }
+
+  const handleProductClick = (product: Product) => {
+    router.push(`/product/${product.id}`)
+  }
 
   const addToCart = (product: Product) => {
     axios.get(`http://localhost:3001/cart?user_id=${user?.uid}`)
@@ -135,141 +171,11 @@ function Category() {
   }
 
 
-  const handleProductClick = (product: Product) => {
-    router.push(`/product/${product.id}`)
-  }
-
-  const handleOriginFilter = (origin: string) => {
-    setSelectedOrigin((prev) =>
-      prev.includes(origin)
-        ? prev.filter((item) => item != origin)
-        : [...prev, origin]
-    )
-  }
-
-  const handleSubCategoryFilter = (subcategory: string) => {
-    setSelectedSubCategory((prev) =>
-      prev.includes(subcategory)
-        ? prev.filter((item) => item != subcategory)
-        : [...prev, subcategory]
-    )
-  }
-
-  const handlePriceFilter = (min: number, max: number | null) => {
-    setSelectedPriceRange((prevRange) => {
-      const newRange: [number, number] = max !== null ? [min, max] : [min, Infinity];
-
-      // Nếu nhấn lại cùng một khoảng giá thì bỏ filter (trở về null)
-      if (prevRange && prevRange[0] === newRange[0] && prevRange[1] === newRange[1]) {
-        setPage(1);
-        return null;
-      }
-
-      setPage(1);
-      return newRange;
-    });
-  };
-
-  const filterProducts = products?.filter((product) => {
-    // 1. Lọc theo giá
-    if (selectedPriceRange) {
-      const price = Number(product.price.replace(/[.,]/g, ""));
-      if (price < selectedPriceRange[0] || price > selectedPriceRange[1]) {
-        return false
-      }
-    }
-
-    // 2. Lọc theo subcategory (nếu có lựa chọn)
-    if (selectedSubCategory.length > 0 && !selectedSubCategory.includes(product.sub_category)) {
-      return false
-    }
-
-    if (selectedOrigin.length > 0 && !selectedOrigin.includes(product.origin)) {
-      return false
-    }
-
-    return true;
-  });
-
-  const sortedProducts = filterProducts?.slice().sort((a, b) => {
-    const priceA = Number(a.price.replace(/[,.]/g, ''))
-    const priceB = Number(b.price.replace(/[,.]/g, ''))
-
-    if (sortOrder === 'asc') return priceA - priceB
-    if (sortOrder === 'des') return priceB - priceA
-
-    return 0
-  })
-
-
-  const totalPages = filterProducts ? Math.ceil(filterProducts.length / ITEMS_PER_PAGE) : 0;
-
-
-  const subcategories = subcategoryMapping[category_name as string] || [];
-
-  const displayedProducts = sortedProducts?.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE);
-
-
-  useEffect(() => {
-    if (!category_name) return;
-
-    const fetchProducts = async () => {
-      setLoading(true);
-      try {
-        const fullCategoryName = categoryMapping[category_name] || category_name;
-
-        const res = await axios.get(`http://localhost:3001/products`, {
-          params: { category: fullCategoryName }
-        });
-
-        setProducts(res.data);
-      } catch (error) {
-        console.error('Lỗi khi lấy sản phẩm:', error);
-        setProducts([]);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
-  }, [category_name]);
-
-  useEffect(() => {
-    if (displayedProducts) {
-      console.log('Displayed products: ', displayedProducts.map(p => p.id))
-    }
-  }, [displayedProducts])
-
-  useEffect(() => {
-    if (products) {
-      console.log('Sản phẩm hiện tại:', products.map(p => p.id));
-    }
-  }, [products]);
-
-  useEffect(() => {
-    if (subCategoryParam) {
-      setSelectedSubCategory([subCategoryParam]); // Tự động tick checkbox
-    }
-  }, [subCategoryParam]);
-
-
-  if (loading) {
-    return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 5 }}>
-        <CircularProgress />
-      </Box>
-    );
-  }
 
   return (
-    <Box sx={{ backgroundColor: '#F5F5F5', minHeight: '100vh', padding: { xs: 2, md: 4 }, px: 8 }}>
-      <Box sx={{ display: 'flex', gap: 2, color: '#2D336B' }}>
-        <Typography sx={{ cursor: 'pointer' }}>Trang chủ / </Typography>
-        <Typography sx={{ cursor: 'pointer' }}> {category_name ? categoryMapping[category_name] || category_name : 'Danh mục'}</Typography>
-      </Box>
-
-      <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mt: 2 }}>
-        <Box sx={{ backgroundColor: 'white', width: { xs: '100%', md: '25%' }, borderRadius: 4, display: { xs: 'none', md: 'block' } }}>
+    <Box sx={{ backgroundColor: '#F5F5F5', minHeight: '100vh', padding: { xs: 2, md: 4 }, px: { xs: 2, md: 8 } }}>
+      <Box sx={{ display: 'flex', gap: 4, mt: 2 }}>
+        <Box sx={{ backgroundColor: 'white', width: '25%', borderRadius: 4, display: { xs: 'none', md: 'block' } }}>
           <Box sx={{ p: 1, px: 3, borderBottom: "1px solid #ddd", display: 'flex', alignItems: 'center', gap: 2 }}>
             <FilterList sx={{ fontWeight: 'bold', fontSize: '24px' }} />
             <Typography sx={{ fontWeight: '600', fontSize: '18px' }}>Bộ lọc</Typography>
@@ -319,41 +225,8 @@ function Category() {
               </AccordionDetails>
             </Accordion>
 
-
-            {/* Phân loại */}
-            <Accordion defaultExpanded disableGutters sx={{ py: 1, boxShadow: "none", borderBottom: "1px solid #ddd" }}>
-              <AccordionSummary
-                expandIcon={<ExpandMore />}
-                sx={{
-                  fontSize: "18px",
-                }}
-              >
-                Phân loại
-              </AccordionSummary>
-              <AccordionDetails
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 1,
-                  padding: "8px 16px",
-                  overflow: "hidden",
-                }}
-              >
-                <FormGroup>
-                  {subcategories.map((sub, index) => (
-                    <FormControlLabel key={index} control={
-                      <Checkbox
-                        checked={selectedSubCategory.includes(sub)}
-                        onChange={() => handleSubCategoryFilter(sub)}
-                      />
-                    } label={sub} />
-                  ))}
-                </FormGroup>
-              </AccordionDetails>
-            </Accordion>
-
             {/* Xuất xứ */}
-            <Accordion disableGutters sx={{ py: 1, boxShadow: "none", borderBottom: "1px solid #ddd" }}>
+            <Accordion defaultExpanded disableGutters sx={{ py: 1, boxShadow: "none", borderBottom: "1px solid #ddd" }}>
               <AccordionSummary
                 expandIcon={<ExpandMore />}
                 sx={{
@@ -387,8 +260,11 @@ function Category() {
               </AccordionDetails>
             </Accordion>
           </Box>
-
         </Box>
+
+
+
+        {/* Products */}
 
         <Box sx={{ width: { xs: '100%', md: '75%' } }}>
           <Box sx={{ display: 'flex', py: 1, mb: 1, alignItems: 'center' }}>
@@ -441,7 +317,6 @@ function Category() {
                 <FilterList sx={{ fontWeight: 'bold', fontSize: '24px' }} />
               </Box>
 
-
               <Drawer anchor="bottom" open={openDrawer} onClose={() => setOpenDrawer(false)} sx={{
                 "& .MuiDrawer-paper": {
                   maxHeight: "80vh",
@@ -493,41 +368,8 @@ function Category() {
                     </AccordionDetails>
                   </Accordion>
 
-
-                  {/* Phân loại */}
-                  <Accordion defaultExpanded disableGutters sx={{ py: 1, boxShadow: "none", borderBottom: "1px solid #ddd" }}>
-                    <AccordionSummary
-                      expandIcon={<ExpandMore />}
-                      sx={{
-                        fontSize: "18px",
-                      }}
-                    >
-                      Phân loại
-                    </AccordionSummary>
-                    <AccordionDetails
-                      sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        gap: 1,
-                        padding: "8px 16px",
-                        overflow: "hidden",
-                      }}
-                    >
-                      <FormGroup>
-                        {subcategories.map((sub, index) => (
-                          <FormControlLabel key={index} control={
-                            <Checkbox
-                              checked={selectedSubCategory.includes(sub)}
-                              onChange={() => handleSubCategoryFilter(sub)}
-                            />
-                          } label={sub} />
-                        ))}
-                      </FormGroup>
-                    </AccordionDetails>
-                  </Accordion>
-
                   {/* Xuất xứ */}
-                  <Accordion disableGutters sx={{ py: 1, boxShadow: "none", borderBottom: "1px solid #ddd" }}>
+                  <Accordion defaultExpanded disableGutters sx={{ py: 1, boxShadow: "none", borderBottom: "1px solid #ddd" }}>
                     <AccordionSummary
                       expandIcon={<ExpandMore />}
                       sx={{
@@ -565,14 +407,10 @@ function Category() {
 
             </Box>
           </Box>
-
-
-          <Box
-            display='grid'
-            gridTemplateColumns={{
-              xs: "repeat(2, 1fr)",
-              md: "repeat(4, 1fr)"
-            }}
+          <Box display='grid' gridTemplateColumns={{
+            xs: "repeat(2, 1fr)",
+            md: "repeat(4, 1fr)"
+          }}
             gap='16px'>
             {displayedProducts?.map((product) => ((
               <Card key={product.id} sx={{ cursor: 'pointer', position: 'relative', borderRadius: 4, height: '100%' }}>
@@ -625,6 +463,7 @@ function Category() {
           </Box>
         </Box>
 
+
       </Box>
 
       {/* Pagination */}
@@ -638,8 +477,9 @@ function Category() {
           />
         </Box>
       )}
+
     </Box>
-  );
+  )
 }
 
-export default Category;
+export default Search

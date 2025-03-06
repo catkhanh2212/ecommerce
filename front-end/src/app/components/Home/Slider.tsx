@@ -19,7 +19,7 @@ function Slider() {
     <Box
       sx={{
         width: '100%',
-        height: '500px',
+        height: {xs: '200px', md: '500px'},
         margin: '0 auto',
         overflow: 'hidden',
         borderRadius: '8px',

@@ -6,7 +6,7 @@ import { bestSellings } from '@/app/api/data/bestsellings'
 
 function BestSelling() {
   return (
-    <Box sx={{ paddingX: 5, paddingTop: 5 }}>
+    <Box sx={{ paddingX: {xs: 2, md: 5}, paddingTop: 5 }}>
         <SectionTitle title='BEST SELLINGS' />
         <ProductCard productCards={bestSellings} />
     </Box>
